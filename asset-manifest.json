@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/github.io/ys-photography/static/css/main.a617e044.chunk.css",
+    "main.js": "/github.io/ys-photography/static/js/main.a91beac0.chunk.js",
+    "main.js.map": "/github.io/ys-photography/static/js/main.a91beac0.chunk.js.map",
+    "runtime-main.js": "/github.io/ys-photography/static/js/runtime-main.ea945dca.js",
+    "runtime-main.js.map": "/github.io/ys-photography/static/js/runtime-main.ea945dca.js.map",
+    "static/js/2.563109ff.chunk.js": "/github.io/ys-photography/static/js/2.563109ff.chunk.js",
+    "static/js/2.563109ff.chunk.js.map": "/github.io/ys-photography/static/js/2.563109ff.chunk.js.map",
+    "static/js/3.cd1067d3.chunk.js": "/github.io/ys-photography/static/js/3.cd1067d3.chunk.js",
+    "static/js/3.cd1067d3.chunk.js.map": "/github.io/ys-photography/static/js/3.cd1067d3.chunk.js.map",
+    "index.html": "/github.io/ys-photography/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/github.io/ys-photography/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.563109ff.chunk.js.LICENSE.txt": "/github.io/ys-photography/static/js/2.563109ff.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/github.io/ys-photography/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ea945dca.js",
+    "static/js/2.563109ff.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.a91beac0.chunk.js"
+  ]
+}
