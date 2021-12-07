@@ -14,7 +14,7 @@ function App() {
   const match = useRouteMatch();
   return (
     <div>
-      <Flex height="15vh" align="center" padding="0 10% 0" z="1">
+      <Flex height="110px" align="center" padding="1% 5%">
         <Container>
           <Navbar bg="none" expand="lg">
             <Col lg="5" xs="1">
@@ -32,7 +32,7 @@ function App() {
             </Col>
             <Col lg="7" xs="9">
               <Nav className="me-auto">
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Collapse id="relative-navbar-nav">
                   <Nav.Link>
                     <LinK to="/about">Про мене</LinK>
                   </Nav.Link>

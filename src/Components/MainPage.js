@@ -38,7 +38,7 @@ export default function MainPage() {
   }
   return (
     <main>
-      <Flex margin="-15vh 0 0 0" position="relative" height={max}>
+      <Flex margin="-110px 0 0 0" position="relative" height={max}>
         <Carousel fade>
           <Carousel.Item style={{ height: max }}>
             <img className="d-block w-100" src={f1} alt="First slide" />

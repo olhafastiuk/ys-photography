@@ -46,10 +46,10 @@ export const Img = (props) => {
 };
 
 const LinkStyler = styled(Link)`
-  font-family: "Neutra Text", sans-serif;
+  font-family: 'Forum', cursive;
   font-style: normal;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 22px !important;
   display: flex;
   align-items: center;
   text-align: center;

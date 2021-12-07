@@ -1,6 +1,8 @@
 .App {
   text-align: center;
-  font-family: "Neutra Text", sans-serif;
+  /* font-family: "Neutra Text", sans-serif;
+   */
+   font-family: 'Forum', cursive;
 }
 
 .logo {
@@ -10,13 +12,9 @@
 }
 
 footer {
-  /* background-image: url(./images/bg-1.png); */
-  /* background-repeat: no-repeat;
-  background-size: 100%;
-  background-position-y: -100px; */
   display: flex;
   height: 20vh;
-  /* height: max-content; */
+  min-height: 100px;
   background: #e3e3e3;
   flex-direction: column;
   justify-content: space-around;
@@ -25,7 +23,7 @@ footer {
   width: 100vw;
   /* padding: 40px 80px; */
 }
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   .footer-nav {
     display: none !important;
   }
