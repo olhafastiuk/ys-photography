@@ -2,7 +2,7 @@
   text-align: center;
   /* font-family: "Neutra Text", sans-serif;
    */
-   font-family: 'Forum', cursive;
+  font-family: "Forum", cursive;
 }
 
 .logo {
@@ -13,19 +13,30 @@
 
 footer {
   display: flex;
-  height: 20vh;
-  min-height: 100px;
+  height: 200px;
   background: #e3e3e3;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 3% 0 1%;
-  align-items: center;
+  justify-content: start;
+  padding: 3% 5% 0;
+  align-items: space-between;
   width: 100vw;
   /* padding: 40px 80px; */
 }
+.footer-nav > a {
+  font-size: 16px !important;
+}
 @media (max-width: 750px) {
-  .footer-nav {
-    display: none !important;
+  .footer-nav > a{
+    /* display: none !important; */
+  font-size: 12px !important;
+
+  }
+  footer{
+    height: 150px
+  }
+  .footer-soc svg {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -33,7 +44,7 @@ main {
   min-height: 65vh;
 }
 .copyright {
-  margin: 2px 2px 0 2px;
+  margin: 10px 0 0;
   font-size: small;
 }
 
