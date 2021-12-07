@@ -22,13 +22,13 @@ function App() {
   const match = useRouteMatch();
   return (
     <div>
-      <Flex height="110px" align="center" padding="1% 5%">
+      <Flex height="110px" align="center" padding="1% 5% 0">
         <Container>
           <Navbar bg="none" expand="lg">
-            <Col lg="5" xs="1">
+            <Col lg="5" xs="1" style={{display:"flex", alignItems:"center"}}>
               <Navbar.Brand>
                 <LinK to="/">
-                  <Image
+                  <Image 
                     fluide
                     className="logo"
                     src={logo}
@@ -56,7 +56,7 @@ function App() {
                 </Navbar.Collapse>
               </Nav>
             </Col>
-            <Col xs="2">
+            <Col xs="2" style={{display:"flex", alignItems:"center"}}>
               <Navbar.Toggle aria-controls="offcanvasNavbar" />
             </Col>
             <Navbar.Offcanvas
@@ -105,7 +105,7 @@ function App() {
       </Switch>
       <footer>
         <Row>
-          <Col xs={3}>
+          <Col xs={2}>
             <LinK to="/">
               <Image
                 fluide
@@ -203,7 +203,7 @@ function App() {
           </Col>
         </Row>
         <Row>
-          <Flex width="100%" direction="column">
+          <Flex width="80%" direction="column" align="center">
             <p className="copyright">Copyright© 2021. All Rights Reserved </p>
             {/* <p className="copyright">All Rights Reserved</p> */}
           </Flex>
