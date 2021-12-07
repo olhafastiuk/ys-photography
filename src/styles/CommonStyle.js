@@ -18,6 +18,8 @@ const StyledFlex = styled.div`
   border-radius: ${(props) => props.radius};
   box-shadow: ${(props) => props.shadow};
   max-height: ${(props) => props.maxHeight || "1400px"};
+  z-index: ${(props) => props.z || "0"};
+  position: ${(props) => props.position};
 
   }
 `;
@@ -37,7 +39,6 @@ const StyledIMG = styled.img`
   top: ${(props) => props.top};
   border-radius: ${(props) => props.radius};
   box-shadow: ${(props) => props.shadow};
-
 `;
 
 export const Img = (props) => {
@@ -49,7 +50,6 @@ const LinkStyler = styled(Link)`
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
-  line-height: 0%;
   display: flex;
   align-items: center;
   text-align: center;
@@ -57,6 +57,7 @@ const LinkStyler = styled(Link)`
   text-decoration: none;
   font-size: ${(props) => props.size || "medium"};
   margin: ${({ margin }) => margin || "0"};
+  }
 `;
 
 export const LinK = (props) => {

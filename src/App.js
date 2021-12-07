@@ -1,5 +1,4 @@
 import { useRouteMatch } from "react-router";
-import "./App.css";
 import { Flex, LinK } from "./styles/CommonStyle";
 import logo from "./images/logo.svg";
 import { Link, Switch, Route } from "react-router-dom";
@@ -7,23 +6,80 @@ import MainPage from "./Components/MainPage";
 import About from "./Components/About";
 import Contacts from "./Components/Contacts";
 import Gallery from "./Components/Gallery";
+import { Navbar, Container, Nav, Col, Offcanvas, Image } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 function App() {
   const match = useRouteMatch();
   return (
     <div>
-      <Flex height="200px" margin="0 5%" align="center">
-        <Flex>
-          <LinK to="/">
-            <img src={logo} alt="" />
-          </LinK>
-        </Flex>
-        <Flex margin="0 0 0 40%" justify="space-around" width="100%">
-          <LinK to="/about">Про мене</LinK>
-          <LinK to="/gallery">Галерея</LinK>
-          <LinK to="/price">Пакети послуг</LinK>
-          <LinK to="/contacts">Контакти</LinK>
-        </Flex>
+      <Flex height="15vh" align="center" padding="0 10% 0" z="1">
+        <Container>
+          <Navbar bg="none" expand="lg">
+            <Col lg="5" xs="1">
+              <Navbar.Brand>
+                <LinK to="/">
+                  <Image
+                    fluide
+                    className="logo"
+                    src={logo}
+                    className="logo"
+                    alt=""
+                  />
+                </LinK>
+              </Navbar.Brand>
+            </Col>
+            <Col lg="7" xs="9">
+              <Nav className="me-auto">
+                <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav.Link>
+                    <LinK to="/about">Про мене</LinK>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <LinK to="/gallery">Галерея</LinK>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <LinK to="/price">Пакети послуг</LinK>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <LinK to="/contacts">Контакти</LinK>
+                  </Nav.Link>
+                </Navbar.Collapse>
+              </Nav>
+            </Col>
+            <Col xs="2">
+              <Navbar.Toggle aria-controls="offcanvasNavbar" />
+            </Col>
+            <Navbar.Offcanvas
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+              placement="end"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id="offcanvasNavbarLabel"></Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="me-auto">
+                  <Navbar.Collapse id="offcanvas-navbar-nav">
+                    <Nav.Link>
+                      <LinK to="/about">Про мене</LinK>
+                    </Nav.Link>
+                    <Nav.Link>
+                      <LinK to="/gallery">Галерея</LinK>
+                    </Nav.Link>
+                    <Nav.Link>
+                      <LinK to="/price">Пакети послуг</LinK>
+                    </Nav.Link>
+                    <Nav.Link>
+                      <LinK to="/contacts">Контакти</LinK>
+                    </Nav.Link>
+                  </Navbar.Collapse>
+                </Nav>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Navbar>
+        </Container>
       </Flex>
       <Switch>
         <Route exact path="/">
@@ -40,14 +96,24 @@ function App() {
         </Route>
       </Switch>
       <footer>
-        <Flex width="60%" justify="space-between" align="center">
+        <Flex
+          className="footer-nav"
+          width="60%"
+          justify="space-between"
+          align="center"
+        >
           <LinK to="/">Головна</LinK>
           <LinK to="/about">Про мене</LinK>
           <LinK to="/gallery">Галерея</LinK>
           <LinK to="/price">Пакети послуг</LinK>
           <LinK to="/contacts">Контакти</LinK>
         </Flex>
-        <Flex width="20%" margin="1.5% 0 0 0" justify="space-between" align="center">
+        <Flex
+          width="200px"
+          margin="1.5% 0 "
+          justify="space-between"
+          align="center"
+        >
           <a target="_blank" href="https://www.instagram.com/yaryna.sem/">
             <svg
               width="20"

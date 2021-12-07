@@ -1,9 +1,24 @@
 import React from "react";
+import {
+  Container,
+  Row,
+  Col,
+  Image,
+  Carousel,
+  Form,
+  Button,
+} from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./mainPage.css";
 import decor from "../images/pwf.svg";
 import bg from "../images/bg-1.png";
 import { Flex, Img } from "../styles/CommonStyle";
 import pp from "../images/photo.jpg";
+import f1 from "../images/gallery/1.jpeg";
+import f2 from "../images/gallery/2.jpeg";
+import f3 from "../images/gallery/3.jpeg";
+import f4 from "../images/gallery/4.jpeg";
+import f5 from "../images/gallery/5.jpeg";
 
 export default function MainPage() {
   let max = "100vh";
@@ -13,151 +28,171 @@ export default function MainPage() {
     this.window.location.reload(true);
   });
   if (visualViewport.height >= visualViewport.width) {
-    max = "50vh";
-    top = "20%";
+    if (visualViewport.width >= 600) {
+      max = "50vh";
+      top = "20%";
+    } else {
+      max = "35vh";
+      top = "20%";
+    }
   }
   return (
     <main>
-      <div className="blackBlock" width="100vw" height={max}></div>
-
-      <Flex
-        width="100vw"
-        height="100vh"
-        margin="-200px 0 0 0"
-        maxHeight={max}
-        bgimg="https://images.pexels.com/photos/4041317/pexels-photo-4041317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        //  bgimg="https://images.pexels.com/photos/6941803/pexels-photo-6941803.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        // bgimg="https://images.pexels.com/photos/10137509/pexels-photo-10137509.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        // bgimg="https://images.pexels.com/photos/1231171/pexels-photo-1231171.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-        // bgimg={bg}
-      >
-        <Img
+      <Flex margin="-15vh 0 0 0" position="relative" height={max}>
+        <Carousel fade>
+          <Carousel.Item style={{ height: max }}>
+            <img className="d-block w-100" src={f1} alt="First slide" />
+          </Carousel.Item>
+          <Carousel.Item style={{ height: max }}>
+            <img className="d-block w-100" src={f2} alt="Second slide" />
+          </Carousel.Item>
+          <Carousel.Item style={{ height: max }}>
+            <img className="d-block w-100" src={f3} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item style={{ height: max }}>
+            <img className="d-block w-100" src={f4} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item style={{ height: max }}>
+            <img className="d-block w-100" src={f5} alt="Third slide" />
+          </Carousel.Item>
+        </Carousel>
+        <Flex
+          width="35vw"
           position="absolute"
-          top={top}
-          right="10%"
-          width="40%"
-          src={decor}
-          alt=""
-        />
+          z="5"
+          height="inherit"
+          className="decor-text"
+        >
+          <Image src={decor} alt="" fluid />
+        </Flex>
       </Flex>
       <Flex
-        margin="0 0"
-        height={max}
+        className="mainBlock"
         align="center"
         justify="center"
-        width="100%"
+        padding="0 3%"
+        height={max}
         bgimg="https://media.istockphoto.com/photos/gray-shadows-of-the-flowers-and-grass-picture-id1164993369?k=20&m=1164993369&s=612x612&w=0&h=_lxBLJPiVYqRTwzGGEu0sOGSclUGAqZAi4yELGJOLMo="
       >
-        <Flex
-          className="mainBlock"
-          direction="column"
-          align="center"
-          margin="0 3%"
-        >
-          <h1> Знайомтесь, Ярина</h1>
-          <p>ЛЮДИНА ПО ТУ СТОРОНУ ОБ’ЄКТИВА</p>
-          {/* <Flex
+        <Container>
+          <Row>
+            <Col md={6} xs={6}>
+              <h1> Знайомтесь, Ярина</h1>
+              <p>ЛЮДИНА ПО ТУ СТОРОНУ ОБ’ЄКТИВА</p>
+            </Col>
+            <Col md={4} xs={6}>
+              <Image src={pp} alt="" fluid />
+            </Col>
+          </Row>
+        </Container>
+      </Flex>
+      {/* <Row number='0.5' >
+           <Flex
             className="blueBlock"
             align="center"
             justify="center"
             background="#cde4ee"
             radius="30px"
-            width="60%"
-            padding="5%"
-            margin="100px 0 0"
+            width="40%"
+            padding="3%"
+            margin="-100px 0 0 25%"
           >
             <p>
               “Емоції роблять фото живими, і це не обов'язково повинен бути
               сміх. (і ще щось бла-бла-бла-бла)”
             </p>
-          </Flex> */}
-        </Flex>
-        <Flex height="70%" margin="0 3%">
-          <Img height="100%" src={pp} alt="" />
-        </Flex>
-      </Flex>
+          </Flex> 
+           </Row> */}
       <Flex
         direction="column"
-        height="max-content"
-        maxHeight="max-content"
+        height="fit-content"
+        maxHeight="fit-content"
         background="#E3E3E3"
       >
-        <Flex
-          margin="50px 0 0 0"
-          width="100%"
-          direction="column"
-          align="center"
-          justify="center"
-        >
-          {/* <p className="recent">RECENT</p>
-          <p className="works">WORKS</p> */}
-          <p className="decor">GALLARY</p>
+        <Flex width="100%" align="center" justify="center" margin="-4% 0 0 0">
+          <p className="decor">GALLERY</p>
         </Flex>
-        <Flex
-          width="80%"
-          margin="0 10% 10%"
-          justify="center"
-          className="gallery"
-        >
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-        </Flex>
+        <div className="gallery">
+          <img src={f1} alt="" />
+          <img src={f2} alt="" />
+          <img src={f3} alt="" />
+          <img src={f4} alt="" />
+          <img src={f5} alt="" />
+          <img src={f1} alt="" />
+        </div>
       </Flex>
       <Flex
         bgimg="https://media.istockphoto.com/photos/gray-shadows-of-the-flowers-and-grass-picture-id1164993369?k=20&m=1164993369&s=612x612&w=0&h=_lxBLJPiVYqRTwzGGEu0sOGSclUGAqZAi4yELGJOLMo="
-        // bgimg="https://image.freepik.com/free-vector/diamond-shape-white-abstract-background_52683-56093.jpg"
+        direction="column"
         align="center"
-        justify="center"
         width="100vw"
-        height="85vh"
-        padding="0 5%"
+        height={max}
+        padding="0 20%"
       >
-        <form className="contactForm" action="">
-          <h1>Запишися зараз:</h1>
-          <Flex width="100%" direction="column" align="center">
-            <Flex width="100%" justify="space-between" >
-              <Flex width="100%" margin="0 1% 0 0">
-              <input
-                className="contactFormInput"
-                type="text"
-                placeholder="Ім'я"
-              />
-              </Flex>
-              <Flex width="100%" margin="0 0 0 1%">
-              <input
-                className="contactFormInput"
-                type="text"
-                placeholder="Телефон"
-              />
-              </Flex>
-            </Flex>
-            <Flex width="100%"margin="3% 0 ">
-              <input
-                className="contactFormInput"
-                type="e-mail"
-                placeholder="E-mail"
-              />
-            </Flex>
-            <Flex width="100%" justify="center" align="center">
-              <input type="submit" value="Надіслати" className="submit" />
-            </Flex>
-          </Flex>
-        </form>
-        <Flex width="90%" height="100%" margin="0 10px 0" align="center" justify="center">
-          <Img
-            width="24rem"
-            src="https://images.pexels.com/photos/10041281/pexels-photo-10041281.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-          />
-<Flex width="5%">
-<p className="decor contact">CONTACT</p>
-
-</Flex>
+        <Flex width="100%" align="center" justify="center" margin="-6% 0 0 0">
+          <p className="decor">CONTACT</p>
         </Flex>
+        <Flex
+          direction="column"
+          align="center"
+          justify="center"
+          width="100vw"
+          height={max}
+          padding="0 30%"
+        >
+          <h1 className="contactFormTitle">Запишися зараз:</h1>
+          <Form className="contactForm">
+            <Row className="mb-3">
+              <Form.Group as={Col} controlId="formGridEmail">
+                {/* <Form.Label>Ім`я</Form.Label> */}
+                <Form.Control type="text" placeholder="Введіть ім`я" />
+              </Form.Group>
 
+              <Form.Group as={Col} controlId="formGridPassword">
+                {/* <Form.Label>Телефон</Form.Label> */}
+                <Form.Control
+                  type="number"
+                  placeholder="Введіть свій номер телефону"
+                />
+              </Form.Group>
+            </Row>
+            <Form.Group as={Col} controlId="formGridEmail">
+              {/* <Form.Label>Email</Form.Label> */}
+              <Form.Control type="email" placeholder="Введіть email" />
+            </Form.Group>
+            <Flex align="center" justify="center" margin="30px 0 0">
+              <Button variant="white" type="submit">
+                Надіслати
+              </Button>
+            </Flex>
+          </Form>
+        </Flex>
+        {/* <Flex
+        position="relative"
+          width="100%"
+          height="100%"
+          // margin="0 10px 0"
+          align="center"
+          justify="center"
+        > */}
+        {/* <Image
+              fluid
+              style={{
+                // position: "absolute",
+                // right: "20%",
+                // height: "68vh",
+                aspectRatio:"3/4.5",
+                // width: "30vw",
+                // "margin-top": "-30%",
+              }}
+              src="https://images.pexels.com/photos/10041281/pexels-photo-10041281.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            /> */}
+        {/* <p className="decor contact">CONTACT</p> */}
+
+        {/* <Flex width="5%">
+            <p className="decor contact">CONTACT</p>
+          </Flex>
+        </Flex>*/}
       </Flex>
     </main>
   );

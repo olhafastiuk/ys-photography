@@ -1,3 +1,11 @@
+.decor-text {
+  transform: translate(60vw, 50%);
+}
+
+.w-100 {
+  width: 100vw !important;
+}
+
 .mainBlock h1 {
   font-family: Songti TC;
   font-style: normal;
@@ -7,9 +15,7 @@
   text-align: center;
   letter-spacing: 0.035em;
   color: #db8e8e;
-  margin-top: -20%;
   margin-bottom: 5%;
-  /* height: max-content; */
 }
 .blackBlock {
   position: absolute;
@@ -21,12 +27,28 @@
   font-family: Neutra Text;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.8rem;
-  line-height: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.7rem;
   text-align: center;
   letter-spacing: 0.23em;
 
   color: #413131;
+}
+@media (max-width: 800px) {
+  .mainBlock h1 {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+  }
+}
+@media (max-width: 500px) {
+  .mainBlock h1 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+  .mainBlock p {
+    font-size: 8px;
+    line-height: 1rem;
+  }
 }
 
 .blueBlock {
@@ -44,42 +66,57 @@
 }
 
 .decor {
-  font-size: 6.5vw;
-  letter-spacing: 0.7em;
+  font-size: 5vw;
+  letter-spacing: 1em;
   text-align: center;
   color: rgba(218, 187, 187, 0.904);
-  margin-top: -94px;
 }
 
 .contact {
-  transform: rotate(90deg);
-  margin-top: -34vh;
-  width: 10px;
-  height:5vh;
+  transform-origin: center;
+  transform: rotate(90deg) translateX(-37vh);
+  /* width: 80vh; */
+  height: 5vh;
   letter-spacing: 0.55em;
-
-  font-size: 8.8vh;
+  /* font-size: 8vh; */
 }
 
 .gallery {
-  flex-wrap: wrap;
+  -webkit-column-count: 3;
+  column-count: 3;
+  column-width: 33%;
+  padding: 0 15%;
+}
+@media (max-width: 800px) {
+  .gallery {
+    -webkit-column-count: 2;
+    column-count: 2;
+    column-width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .gallery {
+    -webkit-column-count: 1;
+    column-count: 1;
+    column-width: 100%;
+  }
 }
 
 .gallery > img {
-  margin: 30px 5%;
-  width: 300px;
-  height: 400px;
+  width: 100%;
+  max-width: 350px;
+  /* height: 300px; */
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  transition: all 350ms ease;
+  margin-bottom: 30px;
 }
 
 .contactForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
 }
 
-.contactForm > h1 {
+.contactFormTitle {
   font-family: Songti TC;
   font-style: normal;
   font-weight: normal;
@@ -90,9 +127,10 @@
   text-align: center;
   letter-spacing: 0.055em;
   color: #000000;
-  margin-top: 10%;
+  /* margin-top: 5%; */
 }
-.contactFormInput {
+
+.contactForm input {
   font-family: Songti TC;
   font-style: normal;
   font-weight: bold;
@@ -100,8 +138,7 @@
   line-height: 42px;
   text-align: start;
   letter-spacing: 0.04em;
-  flex: 1;
-  margin: auto;
+  margin: 3% 0;
   height: 40px;
   border: 2px solid #db8e8e;
   border-radius: 6px;
@@ -109,14 +146,14 @@
   color: #000000;
   background: rgba(0, 0, 0, 0.082);
 }
-.contactFormInput::placeholder {
+.contactForm input::placeholder {
   font-weight: normal;
-  color: #000000;
+  color: #00000077;
 }
 
-.submit {
+.btn-white {
   cursor: pointer;
-  width: 30%;
+  width: 50%;
   font-family: Songti TC;
   font-style: normal;
   font-weight: bold;
@@ -136,34 +173,55 @@
   border-radius: 10px;
 }
 
-.submit:active {
-  filter: none;
+.btn-white:active {
+  background-color: #db8e8e;
+  color: #fff;
+}
+.btn-white:focus {
+  border: none;
+  outline: none;
 }
 
-.submit:hover {
+.btn-white:hover {
   background-color: #db8e8e;
   color: #fff;
 }
 
-.recent {
-  font-family: Neutra Text;
-  font-style: normal;
-  font-weight: normal;
-  font-size: small;
-  line-height: 19px;
-  text-align: center;
+@media (max-width: 500px) {
+  .contactFormTitle {
+    font-size: large;
+    line-height: 30px;
+  }
 
-  color: #9699a1;
+  .contactForm input {
+    height: 30px;
+    border: 1px solid #db8e8e;
+    border-radius: 4px;
+    font-size: smaller;
+  }
+
+  .btn-white {
+    font-size: small;
+    line-height: 25px;
+    border-radius: 8px;
+  }
 }
+@media (max-width: 400px) {
+  .contactForm input {
+    height: 25px;
+    border: 1px solid #db8e8e;
+    border-radius: 4px;
+    font-size: smaller;
+  }
 
-.works {
-  font-family: Neutra Text;
-  font-style: normal;
-  font-weight: normal;
-  font-size: x-large;
-  line-height: 39px;
-  text-align: center;
-  letter-spacing: 0.295em;
-
-  color: #000000;
+  .btn-white {
+    font-size: small;
+    line-height: 20px;
+    border-radius: 8px;
+    margin-top: -25px;
+  }
+}
+.row {
+  justify-content: center;
+  align-items: center;
 }

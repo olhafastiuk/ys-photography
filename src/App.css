@@ -3,20 +3,32 @@
   font-family: "Neutra Text", sans-serif;
 }
 
+.logo {
+  max-width: 80px;
+  width: 30px;
+  flex-grow: 1;
+}
+
 footer {
   /* background-image: url(./images/bg-1.png); */
   /* background-repeat: no-repeat;
   background-size: 100%;
   background-position-y: -100px; */
   display: flex;
-  height: 15vh;
-  background: #E3E3E3;
+  height: 20vh;
+  /* height: max-content; */
+  background: #e3e3e3;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 3% 0 1%;
   align-items: center;
-  width:100vw;
+  width: 100vw;
   /* padding: 40px 80px; */
+}
+@media (max-width: 700px) {
+  .footer-nav {
+    display: none !important;
+  }
 }
 
 main {
@@ -25,6 +37,40 @@ main {
 .copyright {
   margin: 2px 2px 0 2px;
   font-size: small;
+}
+
+.navbar-toggler:focus {
+  border: transparent;
+}
+
+.navbar-light .navbar-toggler {
+  color: transparent;
+  border-color: transparent;
+}
+
+.navbar-collapse {
+  width: 100%;
+  justify-content: space-between;
+}
+
+#basic-navbar-nav.show,
+#basic-navbar-nav.collapsing {
+  display: none;
+}
+
+.navbar-toggler {
+  font-size: 1.3rem;
+  transform: translateY(-15px) translateX(50px);
+}
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(190, 110, 110, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 600px) {
+  .navbar-toggler {
+    font-size: 1rem;
+    transform: translateY(-15px) translateX(30px);
+  }
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
