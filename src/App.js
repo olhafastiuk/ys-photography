@@ -17,18 +17,24 @@ import {
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import f3 from "../src/images/gallery/3.jpeg";
+import f2 from "../src/images/gallery/2.jpeg";
 
 function App() {
   const match = useRouteMatch();
   return (
     <div>
-      <Flex height="110px" align="center" padding="1% 5% 0">
+      <Flex align="start" padding="1% 5% 0" background="#e3e3e3">
         <Container>
-          <Navbar bg="none" expand="lg">
-            <Col lg="5" xs="1" style={{display:"flex", alignItems:"center"}}>
+          <Navbar bg="#e3e3e3" expand="lg">
+            <Col
+              lg="5"
+              xs="1"
+              style={{ display: "flex", alignItems: "center" }}
+            >
               <Navbar.Brand>
                 <LinK to="/">
-                  <Image 
+                  <Image
                     fluide
                     className="logo"
                     src={logo}
@@ -56,7 +62,7 @@ function App() {
                 </Navbar.Collapse>
               </Nav>
             </Col>
-            <Col xs="2" style={{display:"flex", alignItems:"center"}}>
+            <Col xs="2" style={{ display: "flex", alignItems: "center" }}>
               <Navbar.Toggle aria-controls="offcanvasNavbar" />
             </Col>
             <Navbar.Offcanvas
@@ -87,6 +93,14 @@ function App() {
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Navbar>
+          <Flex
+            width="100%"
+            height="50px"
+            style={{
+              "border-top": "1px solid  #b3a9a8a8",
+              "margin-top": "20px",
+            }}
+          ></Flex>
         </Container>
       </Flex>
       <Switch>
@@ -104,6 +118,61 @@ function App() {
         </Route>
       </Switch>
       <footer>
+        <Row>
+          <Flex
+            width="93%"
+            margin="40px 0"
+            style={{
+              "border-top": "1px solid  #b3a9a8a8",
+            }}
+          ></Flex>
+        </Row>
+        <Row>
+          <Flex width="90%" margin="0 0 5%">
+            <Image
+              width="25%"
+              style={{
+                "aspect-ratio": "1/1",
+                "object-fit": "cover",
+              }}
+              fluid
+              src={f3}
+              alt=""
+              srcset=""
+            />
+            <Image
+              width="25%"
+              style={{
+                "aspect-ratio": "1/1",
+                "object-fit": "cover",
+              }}
+              fluid
+              src="https://images.pexels.com/photos/5853833/pexels-photo-5853833.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+              alt=""
+            />
+
+            <Image
+              width="25%"
+              style={{
+                "aspect-ratio": "1/1",
+                "object-fit": "cover",
+              }}
+              fluid
+              src="https://images.pexels.com/photos/4623060/pexels-photo-4623060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              alt=""
+            />
+            <Image
+              width="25%"
+              style={{
+                "aspect-ratio": "1/1",
+                "object-fit": "cover",
+              }}
+              fluid
+              src={f2}
+              alt=""
+            />
+          </Flex>
+        </Row>
         <Row>
           <Col xs={2}>
             <LinK to="/">
@@ -127,7 +196,7 @@ function App() {
           </Col>
           <Col xs={4}>
             <Flex
-            className="footer-soc"
+              className="footer-soc"
               margin="2% "
               justify="space-between"
               align="center"
@@ -203,7 +272,16 @@ function App() {
           </Col>
         </Row>
         <Row>
-          <Flex width="80%" direction="column" align="center">
+          <Flex
+            width="93%"
+            direction="column"
+            align="center"
+            justify="center"
+            margin="20px 0"
+            style={{
+              "border-top": "1px solid  #b3a9a8a8",
+            }}
+          >
             <p className="copyright">Copyright© 2021. All Rights Reserved </p>
             {/* <p className="copyright">All Rights Reserved</p> */}
           </Flex>

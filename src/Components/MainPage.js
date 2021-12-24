@@ -1,18 +1,9 @@
 import React from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Image,
-  Carousel,
-  Form,
-  Button,
-} from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./mainPage.css";
 import decor from "../images/pwf.svg";
-import bg from "../images/bg-1.png";
-import { Flex, Img } from "../styles/CommonStyle";
+import { Flex } from "../styles/CommonStyle";
 import pp from "../images/photo.jpg";
 import f1 from "../images/gallery/1.jpeg";
 import f2 from "../images/gallery/2.jpeg";
@@ -20,58 +11,82 @@ import f3 from "../images/gallery/3.jpeg";
 import f4 from "../images/gallery/4.jpeg";
 import f5 from "../images/gallery/5.jpeg";
 
-export default function MainPage() {
-  let max = "100vh";
-  let top = "45%";
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
+import "swiper/swiper.min.css";
+import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
 
-  window.addEventListener("resize", function (event) {
-    this.window.location.reload(true);
-  });
-  if (visualViewport.height >= visualViewport.width) {
-    if (visualViewport.width >= 600) {
-      max = "50vh";
-      top = "20%";
-    } else {
-      max = "35vh";
-      top = "20%";
-    }
-  }
+export default function MainPage() {
+  SwiperCore.use([EffectCoverflow, Pagination]);
   return (
     <main>
-      <Flex margin="-110px 0 0 0" position="relative" height={max}>
-        <Carousel fade>
-          <Carousel.Item style={{ height: max }}>
-            <img className="d-block w-100" src={f1} alt="First slide" />
-          </Carousel.Item>
-          <Carousel.Item style={{ height: max }}>
-            <img className="d-block w-100" src={f2} alt="Second slide" />
-          </Carousel.Item>
-          <Carousel.Item style={{ height: max }}>
-            <img className="d-block w-100" src={f3} alt="Third slide" />
-          </Carousel.Item>
-          <Carousel.Item style={{ height: max }}>
-            <img className="d-block w-100" src={f4} alt="Third slide" />
-          </Carousel.Item>
-          <Carousel.Item style={{ height: max }}>
-            <img className="d-block w-100" src={f5} alt="Third slide" />
-          </Carousel.Item>
-        </Carousel>
+      <Flex
+      id="start"
+        background="#e3e3e3"
+        height="800px"
+        style={{ "flex-wrap": "wrap" }}
+      >
         <Flex
-          width="35vw"
-          position="absolute"
-          z="5"
-          height="inherit"
-          className="decor-text"
+          direction="column"
+          align="center"
+          background="#E3E3E3"
+          style={{ flex: 4 }}
         >
-          <Image src={decor} alt="" fluid />
+          <Flex id="start-slider" background="#E3E3E3">
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={10}
+              pagination={{
+                clickable: true,
+              }}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <img src={f1} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={f2} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={f3} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={f4} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={f5} alt="" />
+              </SwiperSlide>
+            </Swiper>
+          </Flex>
+          <Flex
+            width="80%"
+            align="center"
+            justify="center"
+            margin="-15% 0 70px"
+            background="rgba(255, 255, 255, 0.8)"
+            radius="20px"
+            padding="5%"
+            height="60%"
+          >
+            <Image width="60%" src={decor} alt="" fluid />
+          </Flex>
+        </Flex>
+        <Flex
+          bgimg="https://images.pexels.com/photos/4623060/pexels-photo-4623060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          style={{
+            flex: 3,
+            opacity: 0.3,
+            height:"100%"
+          }}
+        >
+          {/* {" "} */}
         </Flex>
       </Flex>
       <Flex
         className="mainBlock"
         align="center"
         justify="center"
-        padding="0 3%"
-        height={max}
+        padding="10% 3%"
+        height="max-content"
         bgimg="https://media.istockphoto.com/photos/gray-shadows-of-the-flowers-and-grass-picture-id1164993369?k=20&m=1164993369&s=612x612&w=0&h=_lxBLJPiVYqRTwzGGEu0sOGSclUGAqZAi4yELGJOLMo="
       >
         <Container>
@@ -80,29 +95,36 @@ export default function MainPage() {
               <h1> Знайомтесь, Ярина</h1>
               <p>ЛЮДИНА ПО ТУ СТОРОНУ ОБ’ЄКТИВА</p>
             </Col>
-            <Col md={4} xs={6}>
-              <Image src={pp} alt="" fluid />
+            <Col md={5} xs={6}>
+              <Image
+                style={{ "border-radius": "50px", position: "relative" }}
+                src={pp}
+                alt=""
+                fluid
+              />
             </Col>
           </Row>
+          {/* <Row number="0.5">
+        <Flex
+          className="blueBlock"
+          align="center"
+          justify="center"
+          background="#cde4ee"
+          radius="30px"
+          width="40%"
+          padding="3%"
+          margin="-100px 0 0 25%"
+          position="relative"
+          z="1"
+        >
+          <p>
+            “Емоції роблять фото живими, і це не обов'язково повинен бути сміх.
+            (і ще щось бла-бла-бла-бла)”
+          </p>
+        </Flex>
+      </Row> */}
         </Container>
       </Flex>
-      {/* <Row number='0.5' >
-           <Flex
-            className="blueBlock"
-            align="center"
-            justify="center"
-            background="#cde4ee"
-            radius="30px"
-            width="40%"
-            padding="3%"
-            margin="-100px 0 0 25%"
-          >
-            <p>
-              “Емоції роблять фото живими, і це не обов'язково повинен бути
-              сміх. (і ще щось бла-бла-бла-бла)”
-            </p>
-          </Flex> 
-           </Row> */}
       <Flex
         direction="column"
         height="fit-content"
@@ -122,77 +144,160 @@ export default function MainPage() {
         </div>
       </Flex>
       <Flex
-        bgimg="https://media.istockphoto.com/photos/gray-shadows-of-the-flowers-and-grass-picture-id1164993369?k=20&m=1164993369&s=612x612&w=0&h=_lxBLJPiVYqRTwzGGEu0sOGSclUGAqZAi4yELGJOLMo="
         direction="column"
+        padding="5%"
+        justify="center"
         align="center"
-        width="100vw"
-        height={max}
-        padding="0 20%"
+        bgimg="https://media.istockphoto.com/photos/gray-shadows-of-the-flowers-and-grass-picture-id1164993369?k=20&m=1164993369&s=612x612&w=0&h=_lxBLJPiVYqRTwzGGEu0sOGSclUGAqZAi4yELGJOLMo="
+        style={{
+          "background-size": "500px",
+          "background-position": "left bottom",
+        }}
       >
-        <Flex width="100%" align="center" justify="center" margin="-6% 0 0 0">
-          <p className="decor">CONTACT</p>
-        </Flex>
+        <h1 style={{ "padding-bottom": "3%" }}>Поширені запитання</h1>
         <Flex
-          direction="column"
-          align="center"
+          direction="row"
+          style={{ "flex-wrap": "wrap", "text-align": "center" }}
           justify="center"
-          width="100vw"
-          height={max}
-          padding="0 30%"
         >
-          <h1 className="contactFormTitle">Запишися зараз:</h1>
-          <Form className="contactForm">
-            <Row className="mb-3">
-              <Form.Group as={Col} controlId="formGridEmail">
-                {/* <Form.Label>Ім`я</Form.Label> */}
-                <Form.Control type="text" placeholder="Введіть ім`я" />
-              </Form.Group>
-
-              <Form.Group as={Col} controlId="formGridPassword">
-                {/* <Form.Label>Телефон</Form.Label> */}
-                <Form.Control
-                  type="number"
-                  placeholder="Введіть свій номер телефону"
-                />
-              </Form.Group>
-            </Row>
-            <Form.Group as={Col} controlId="formGridEmail">
-              {/* <Form.Label>Email</Form.Label> */}
-              <Form.Control type="email" placeholder="Введіть email" />
-            </Form.Group>
-            <Flex align="center" justify="center" margin="30px 0 0">
-              <Button variant="white" type="submit">
-                Надіслати
-              </Button>
-            </Flex>
-          </Form>
-        </Flex>
-        {/* <Flex
-        position="relative"
-          width="100%"
-          height="100%"
-          // margin="0 10px 0"
-          align="center"
-          justify="center"
-        > */}
-        {/* <Image
-              fluid
-              style={{
-                // position: "absolute",
-                // right: "20%",
-                // height: "68vh",
-                aspectRatio:"3/4.5",
-                // width: "30vw",
-                // "margin-top": "-30%",
-              }}
-              src="https://images.pexels.com/photos/10041281/pexels-photo-10041281.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            /> */}
-        {/* <p className="decor contact">CONTACT</p> */}
-
-        {/* <Flex width="5%">
-            <p className="decor contact">CONTACT</p>
+          <Flex direction="column" align="center" width="250px" padding="1%">
+            <h3>Якесь часте запитання?</h3>
+            <p>
+              Ось коротка відповідь, яка допоможе відвідувачам і потенційним
+              клієнтам отримати відповідь на поширене запитання.
+            </p>
           </Flex>
-        </Flex>*/}
+          <Flex direction="column" align="center" width="250px" padding="1%">
+            <h3>Якесь запитання?</h3>
+            <p>Ось коротка відповідь.</p>
+          </Flex>
+          <Flex direction="column" align="center" width="250px" padding="1%">
+            <h3>Якесь часте запитання?</h3>
+            <p>
+              Ось коротка відповідь, яка допоможе відвідувачам і потенційним
+              клієнтам отримати відповідь на поширене запитання.
+            </p>
+          </Flex>
+          <Flex direction="column" align="center" width="250px" padding="1%">
+            <h3>Якесь часте запитання?</h3>
+            <p>Ось коротка відповідь.</p>
+          </Flex>
+          <Flex direction="column" align="center" width="250px" padding="1%">
+            <h3>Якесь часте запитання?</h3>
+            <p>Ось коротка відповідь.</p>
+          </Flex>
+          <Flex direction="column" align="center" width="250px" padding="1%">
+            <h3>Якесь часте запитання?</h3>
+            <p>
+              Ось коротка відповідь, яка допоможе відвідувачам і потенційним
+              клієнтам отримати відповідь на поширене запитання.
+            </p>
+          </Flex>
+          <Flex direction="column" align="center" width="250px" padding="1%">
+            <h3>Якесь часте запитання?</h3>
+            <p>
+              Ось коротка відповідь, яка допоможе відвідувачам і потенційним
+              клієнтам отримати відповідь на поширене запитання.
+            </p>
+          </Flex>
+          <Flex direction="column" align="center" width="250px" padding="1%">
+            <h3>Якесь часте запитання?</h3>
+            <p>
+              Ось коротка відповідь, яка допоможе відвідувачам і потенційним
+              клієнтам отримати відповідь на поширене запитання.
+            </p>
+          </Flex>
+        </Flex>
+      </Flex>
+      <Flex
+        bgimg="https://images.pexels.com/photos/5853183/pexels-photo-5853183.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        height="500px"
+        style={{ "background-position": "center" }}
+        direction="column"
+        justify="center"
+      >
+        <Swiper
+          keyboard={{
+            enabled: true,
+          }}
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={true}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <Flex className="response" direction="column" width="60%">
+              <h1>"Captured this season of life so perfectly."</h1>
+              <p>
+                "Sweet biscuit sugar plum. Halvah chocolate bar jujubes. Dragée
+                donut candy gingerbread muffin chocolate bar topping tootsie
+                roll. Fruitcake danish sesame snaps pastry tart jujubes halvah
+                biscuit. Cupcake donut gingerbread. Bonbon sweet roll oat cake
+                pie pastry bonbon jelly-o bonbon jelly beans."
+              </p>
+            </Flex>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Flex direction="column" width="60%" className="response">
+              <h1>Відгук 2</h1>
+              <p>Текст відгука</p>
+            </Flex>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Flex direction="column" width="60%" className="response">
+              <h1>Відгук 3</h1>
+              <p>Текст відгука</p>
+            </Flex>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Flex direction="column" width="60%" className="response">
+              <h1>Відгук 4</h1>
+              <p>Текст відгука</p>
+            </Flex>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Flex direction="column" width="60%" className="response">
+              <h1>Відгук 5</h1>
+              <p>Текст відгука</p>
+            </Flex>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Flex direction="column" width="60%" className="response">
+              <h1>Відгук 6</h1>
+              <p>Текст відгука</p>
+            </Flex>
+          </SwiperSlide>
+        </Swiper>
+        <Flex
+          justify="flex-end"
+          padding="20px 0 0 0"
+          width="85%"
+          height="30%"
+          style={{
+            "border-top": "1px solid  white",
+            "margin-left": "7.5%",
+          }}
+        >
+          <a
+            style={{
+              "text-decoration": "none",
+              color: " white",
+              "font-size": "15px",
+            }}
+            href="#contact"
+          >
+            ЗАБРОНЮВАТИ ЗАРАЗ
+          </a>
+        </Flex>
       </Flex>
     </main>
   );

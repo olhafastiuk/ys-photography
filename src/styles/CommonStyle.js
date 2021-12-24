@@ -19,7 +19,10 @@ const StyledFlex = styled.div`
   box-shadow: ${(props) => props.shadow};
   max-height: ${(props) => props.maxHeight || "1400px"};
   z-index: ${(props) => props.z || "0"};
-  position: ${(props) => props.position};
+  position: ${(props) => props.position};\
+  font-family: 'Forum', cursive;
+  font-style: normal;
+  color: ${(props) => props.color || "#5B4340"};
 
   }
 `;

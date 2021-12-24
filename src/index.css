@@ -14,11 +14,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-image: url(https://images.pexels.com/photos/4623060/pexels-photo-4623060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
+  );
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100vw;
+  /* background-size: cover; */
   /* font-family: "Neutra Text", sans-serif; */
   /* transform: translate3d(0px, 0px, 0px); */
   /* transition: all 700ms ease; */
 }
-
+main{
+  background: white;
+}
 code {
   font-family: 'Forum', cursive;
 }
