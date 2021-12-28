@@ -1,0 +1,33 @@
+h3 {
+  font-size: 1vw;
+  font-weight: bolder;
+  letter-spacing: 0.23em;
+}
+p {
+  font-size: 1.3vw;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: #64a5d6;
+}
+
+@media (max-width: 800px) {
+  #contacts {
+    flex-direction: column;
+    margin-top: 20%;
+    padding: 0;
+  }
+  h3 {
+  font-size: 15px;
+  }
+  p {
+      font-size: 12px;
+  }
+  #contacts img {
+      min-width: 90px !important;
+  }
+}
