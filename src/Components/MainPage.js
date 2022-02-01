@@ -8,7 +8,7 @@ import pp from "../images/photo.jpg";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import "swiper/swiper.min.css";
 import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from "swiper";
-import { Photos, questions, SliderPhoto } from "./Arrays";
+import { Photos, questions, reviews, SliderPhoto } from "./Arrays";
 
 export default function MainPage() {
   SwiperCore.use([EffectCoverflow, Pagination]);
@@ -80,11 +80,11 @@ export default function MainPage() {
         className="mainBlock"
         align="center"
         justify="center"
-        padding="10% 3%"
+        padding="5rem"
         height="100vh"
         bgimg="https://media.istockphoto.com/photos/gray-shadows-of-the-flowers-and-grass-picture-id1164993369?k=20&m=1164993369&s=612x612&w=0&h=_lxBLJPiVYqRTwzGGEu0sOGSclUGAqZAi4yELGJOLMo="
       >
-        <Col lg={8} md={6} xs={6}>
+        <Col lg={6} md={6} xs={6}>
           <h1> Знайомтесь, Ярина</h1>
           <p>ЛЮДИНА ПО ТУ СТОРОНУ ОБ’ЄКТИВА</p>
         </Col>
@@ -118,7 +118,8 @@ export default function MainPage() {
           justify="center"
           align="center"
           margin="0 0  2rem 0"
-          style={{ maxWidth: "1500px", flexWrap: "wrap" }}
+          padding=" 0 5rem"
+          style={{flexWrap: "wrap" }}
           className="gallery"
         >
           {Photos.map((el) => (
@@ -128,7 +129,7 @@ export default function MainPage() {
       </Flex>
       <Flex
         direction="column"
-        padding="2.5rem 3rem"
+        padding="2.5rem 5rem"
         justify="center"
         align="center"
         bgimg="https://media.istockphoto.com/photos/gray-shadows-of-the-flowers-and-grass-picture-id1164993369?k=20&m=1164993369&s=612x612&w=0&h=_lxBLJPiVYqRTwzGGEu0sOGSclUGAqZAi4yELGJOLMo="
@@ -159,72 +160,50 @@ export default function MainPage() {
         </Flex>
       </Flex>
       <Flex
-        bgimg="https://images.pexels.com/photos/5853183/pexels-photo-5853183.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        height="500px"
-        style={{ "background-position": "center" }}
+        // bgimg="https://images.pexels.com/photos/5853183/pexels-photo-5853183.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        // bgimg="https://images.pexels.com/photos/8747009/pexels-photo-8747009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        bgimg="https://images.pexels.com/photos/8165548/pexels-photo-8165548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        height="600px"
+        style={{ "background-position-y": "80%" }}
         direction="column"
         justify="center"
       >
         <Swiper
-          keyboard={{
-            enabled: true,
-          }}
-          effect={"coverflow"}
+          // style={{ backgroundColor: "rgba(0, 0, 0, 0.226" }}
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
+          slidesPerView={1}
+          spaceBetween={40}
+          autoplay={{
+            delay: 6500,
+            disableOnInteraction: false,
           }}
+          loop={true}
           pagination={true}
+          modules={[Autoplay, Pagination]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <Flex className="response" direction="column" width="60%">
-              <h1>"Captured this season of life so perfectly."</h1>
-              <p>
-                "Sweet biscuit sugar plum. Halvah chocolate bar jujubes. Dragée
-                donut candy gingerbread muffin chocolate bar topping tootsie
-                roll. Fruitcake danish sesame snaps pastry tart jujubes halvah
-                biscuit. Cupcake donut gingerbread. Bonbon sweet roll oat cake
-                pie pastry bonbon jelly-o bonbon jelly beans."
-              </p>
-            </Flex>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Flex direction="column" width="60%" className="response">
-              <h1>Відгук 2</h1>
-              <p>Текст відгука</p>
-            </Flex>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Flex direction="column" width="60%" className="response">
-              <h1>Відгук 3</h1>
-              <p>Текст відгука</p>
-            </Flex>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Flex direction="column" width="60%" className="response">
-              <h1>Відгук 4</h1>
-              <p>Текст відгука</p>
-            </Flex>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Flex direction="column" width="60%" className="response">
-              <h1>Відгук 5</h1>
-              <p>Текст відгука</p>
-            </Flex>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Flex direction="column" width="60%" className="response">
-              <h1>Відгук 6</h1>
-              <p>Текст відгука</p>
-            </Flex>
-          </SwiperSlide>
+          {reviews.map((el) => (
+            <SwiperSlide>
+              <Flex
+                style={{ backgroundColor: "rgba(0, 0, 0, 0.4" }}
+                align="center"
+                justify="center"
+                width="80vw"
+                height="90%"
+                padding="3rem"
+                direction="column"
+                color="white"
+              >
+                <h1 style={{ textAlign: "center", fontSize: "2.2rem" }}>
+                  {el.title}
+                </h1>
+                <p style={{ textAlign: "center", fontSize: "1.5rem" }}>
+                  {el.text}
+                </p>
+              </Flex>
+            </SwiperSlide>
+          ))}
         </Swiper>
         <Flex
           justify="flex-end"
@@ -240,9 +219,9 @@ export default function MainPage() {
             style={{
               "text-decoration": "none",
               color: " white",
-              "font-size": "15px",
+              "font-size": "1.5rem",
             }}
-            href="#contact"
+            href="#contacts"
           >
             ЗАБРОНЮВАТИ ЗАРАЗ
           </a>

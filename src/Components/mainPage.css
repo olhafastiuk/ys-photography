@@ -38,39 +38,32 @@
   background: transparent;
 }
 
-.swiper h1,
-.swiper p {
-  color: white;
-  text-align: start;
-}
-
 .mainBlock h1 {
   font-family: "Forum", cursive;
   font-style: normal;
   font-weight: normal;
-  font-size: 3.8rem;
-  line-height: 4rem;
+  font-size: 4rem;
   text-align: center;
   letter-spacing: 0.035em;
   color: #db8e8e;
-  margin-bottom: 5%;
+  margin-bottom: 5rem;
 }
 
 .mainBlock p {
   font-family: "Forum", cursive;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.7rem;
   text-align: center;
-  letter-spacing: 0.28rem;
+  letter-spacing: 0.5rem;
   color: #413131;
 }
 
 .decor {
-  font-size: 3.7rem;
-  letter-spacing: 4rem;
-  margin-left: 4rem;
+  font-size: 4rem;
+  letter-spacing: 3rem;
+  margin-left: 3rem;
   text-align: center;
   color: rgba(218, 187, 187, 0.904);
 }
@@ -89,16 +82,6 @@
   align-items: center;
 }
 
-.response {
-  margin-left: -25% !important;
-}
-
-.response h1 {
-  margin-bottom: 20px;
-  font-style: 60px;
-  font-style: italic;
-}
-
 @media (max-width: 880px) {
   #start-slider {
     width: 100vw;
@@ -110,6 +93,17 @@
 
   .mainBlock {
     height: 50vh !important;
+  }
+  .mainBlock h1 {
+    font-size: 3.8rem;
+    line-height: 4rem;
+    letter-spacing: 0.035em;
+  }
+
+  .mainBlock p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.28rem;
   }
 }
 
@@ -131,5 +125,17 @@
   .firstScreen-text {
     height: 15vh !important;
     margin: -8vh 0 0 0 !important;
+  }
+  .mainBlock h1 {
+    font-size: 3.3rem;
+    line-height: 3rem;
+  }
+
+  .mainBlock p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+  .mainBlock {
+    height: 40vh !important;
   }
 }

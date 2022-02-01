@@ -9,15 +9,15 @@ const StyledFlex = styled.div`
   align-items: ${(props) => props.align || "start"};
   margin: ${({ margin }) => margin || "0"};
   padding: ${({ padding }) => padding || "0"};
-  width: ${(props) => props.width || "auto"};
-  height: ${(props) => props.height || "auto"};
+  width: ${(props) => props.width || "100%"};
+  height: ${(props) => props.height || "100%"};
   background-size: ${(props) => props.backgroundSize || "cover"};
   background: ${(props) => props.background};
   background-image: url(${(props) => props.bgimg || "./images/bg-1.png"});
   background-repeat: no-repeat;
   border-radius: ${(props) => props.radius};
   box-shadow: ${(props) => props.shadow};
-  max-height: ${(props) => props.maxHeight || "1400px"};
+  max-height: ${(props) => props.maxHeight };
   z-index: ${(props) => props.z || "0"};
   position: ${(props) => props.position};\
   font-family: 'Forum', cursive;
