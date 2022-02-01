@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-  /* font-family: "Neutra Text", sans-serif;
-   */
   font-family: "Forum", cursive;
 }
 
@@ -10,11 +8,7 @@
 }
 
 .logo {
-  /* max-width: 100px; */
-  min-width: 60px;
-  max-width: 100px;
-  width: 100%;
-  flex-grow: 1;
+  width: 6rem;
   margin-top: 5%;
 }
 
@@ -33,22 +27,21 @@ footer {
 footer .logo {
   height: 80px;
 }
-.footer-nav > a {
-  font-size: 16px !important;
-}
 
 .copyright {
   margin: 10px 0 0;
   font-size: small;
 }
+
+@media (min-width: 1800px) {
+  .col-lg-5 {
+    margin-left: -20%;
+  }
+  .col-lg-7 {
+    width: 100%;
+  }
+}
 @media (max-width: 750px) {
-  .footer-nav > a {
-    font-size: 12px !important;
-  }
-  .footer-soc svg {
-    width: 18px;
-    height: 18px;
-  }
   .copyright {
     font-size: xx-small;
   }
@@ -56,12 +49,6 @@ footer .logo {
 
 main {
   min-height: 65vh;
-}
-
-@media (max-width: 800px) {
-  #relative-navbar-nav {
-    display: none;
-  }
 }
 
 .navbar-toggler:focus {
@@ -84,44 +71,8 @@ main {
 }
 
 .navbar-toggler {
-  font-size: 1.3rem;
+  font-size: 3rem;
 }
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(190, 110, 110, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
-
-@media (max-width: 600px) {
-  .navbar-toggler {
-    font-size: 1rem;
-  }
-}
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

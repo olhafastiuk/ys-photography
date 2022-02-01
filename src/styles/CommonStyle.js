@@ -17,7 +17,7 @@ const StyledFlex = styled.div`
   background-repeat: no-repeat;
   border-radius: ${(props) => props.radius};
   box-shadow: ${(props) => props.shadow};
-  max-height: ${(props) => props.maxHeight };
+  max-height: ${(props) => props.maxHeight};
   z-index: ${(props) => props.z || "0"};
   position: ${(props) => props.position};\
   font-family: 'Forum', cursive;
@@ -52,7 +52,7 @@ const LinkStyler = styled(Link)`
   font-family: 'Forum', cursive;
   font-style: normal;
   font-weight: 500;
-  font-size: 22px !important;
+  font-size: 1.8rem !important;
   display: flex;
   align-items: center;
   text-align: center;

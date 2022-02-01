@@ -119,7 +119,7 @@ export default function MainPage() {
           align="center"
           margin="0 0  2rem 0"
           padding=" 0 5rem"
-          style={{flexWrap: "wrap" }}
+          style={{ flexWrap: "wrap" }}
           className="gallery"
         >
           {Photos.map((el) => (
@@ -129,7 +129,7 @@ export default function MainPage() {
       </Flex>
       <Flex
         direction="column"
-        padding="2.5rem 5rem"
+        padding="100px 0"
         justify="center"
         align="center"
         bgimg="https://media.istockphoto.com/photos/gray-shadows-of-the-flowers-and-grass-picture-id1164993369?k=20&m=1164993369&s=612x612&w=0&h=_lxBLJPiVYqRTwzGGEu0sOGSclUGAqZAi4yELGJOLMo="
@@ -160,11 +160,11 @@ export default function MainPage() {
         </Flex>
       </Flex>
       <Flex
-        // bgimg="https://images.pexels.com/photos/5853183/pexels-photo-5853183.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        bgimg="https://images.pexels.com/photos/5853183/pexels-photo-5853183.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         // bgimg="https://images.pexels.com/photos/8747009/pexels-photo-8747009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        bgimg="https://images.pexels.com/photos/8165548/pexels-photo-8165548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        // bgimg="https://images.pexels.com/photos/8165548/pexels-photo-8165548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         height="600px"
-        style={{ "background-position-y": "80%" }}
+        style={{ "background-position": "60%" }}
         direction="column"
         justify="center"
       >
@@ -195,8 +195,8 @@ export default function MainPage() {
                 direction="column"
                 color="white"
               >
-                <h1 style={{ textAlign: "center", fontSize: "2.2rem" }}>
-                  {el.title}
+                <h1 style={{ textAlign: "center", fontSize: "4rem", fontStyle:"italic" }}>
+                  {`"${el.title}"`}
                 </h1>
                 <p style={{ textAlign: "center", fontSize: "1.5rem" }}>
                   {el.text}
