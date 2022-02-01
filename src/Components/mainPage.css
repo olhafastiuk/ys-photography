@@ -8,7 +8,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 3.8rem;
-  line-height: 4.2rem;
+  line-height: 4rem;
   text-align: center;
   letter-spacing: 0.035em;
   color: #db8e8e;
@@ -20,11 +20,10 @@
   font-family: "Forum", cursive;
   font-style: normal;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.7rem;
   text-align: center;
-  letter-spacing: 0.23em;
-
+  letter-spacing: 0.28rem;
   color: #413131;
 }
 
@@ -104,14 +103,14 @@
     height: 20vh !important;
   }
 
-  .mainBlock h1,
-  .response h1 {
-    font-size: 35px;
-    line-height: 3.2rem;
+  .mainBlock {
+    height: 50vh !important;
   }
-  .mainBlock p,
-  .response p {
-    font-size: 14px;
+}
+
+@media (max-height: 500px) {
+  .mainBlock img {
+    max-height: 80vh;
   }
 }
 
@@ -128,13 +127,8 @@
     height: 15vh !important;
     margin: -8vh 0 0 0 !important;
   }
-  .mainBlock h1 {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-  }
-  .mainBlock p {
-    font-size: 8px;
-    line-height: 1rem;
+  .mainBlock {
+    height: 40vh !important;
   }
 }
 .decor {

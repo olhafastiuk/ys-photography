@@ -96,44 +96,21 @@ export default function MainPage() {
         align="center"
         justify="center"
         padding="10% 3%"
-        height="max-content"
+        height="100vh"
         bgimg="https://media.istockphoto.com/photos/gray-shadows-of-the-flowers-and-grass-picture-id1164993369?k=20&m=1164993369&s=612x612&w=0&h=_lxBLJPiVYqRTwzGGEu0sOGSclUGAqZAi4yELGJOLMo="
       >
-        <Container>
-          <Row>
-            <Col md={6} xs={6}>
-              <h1> Знайомтесь, Ярина</h1>
-              <p>ЛЮДИНА ПО ТУ СТОРОНУ ОБ’ЄКТИВА</p>
-            </Col>
-            <Col md={5} xs={6}>
-              <Image
-                style={{ "border-radius": "50px", position: "relative" }}
-                src={pp}
-                alt=""
-                fluid
-              />
-            </Col>
-          </Row>
-          {/* <Row number="0.5">
-        <Flex
-          className="blueBlock"
-          align="center"
-          justify="center"
-          background="#cde4ee"
-          radius="30px"
-          width="40%"
-          padding="3%"
-          margin="-100px 0 0 25%"
-          position="relative"
-          z="1"
-        >
-          <p>
-            “Емоції роблять фото живими, і це не обов'язково повинен бути сміх.
-            (і ще щось бла-бла-бла-бла)”
-          </p>
-        </Flex>
-      </Row> */}
-        </Container>
+        <Col lg={8} md={6} xs={6}>
+          <h1> Знайомтесь, Ярина</h1>
+          <p>ЛЮДИНА ПО ТУ СТОРОНУ ОБ’ЄКТИВА</p>
+        </Col>
+        <Col lg={4} md={5} xs={6}>
+          <Image
+            style={{ "border-radius": "50px", position: "relative" }}
+            src={pp}
+            alt=""
+            fluid
+          />
+        </Col>
       </Flex>
       <Flex
         direction="column"
