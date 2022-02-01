@@ -13,14 +13,14 @@ import f5 from "../images/gallery/5.jpeg";
 
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import "swiper/swiper.min.css";
-import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
+import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from "swiper";
 
 export default function MainPage() {
   SwiperCore.use([EffectCoverflow, Pagination]);
   return (
     <main>
       <Flex
-      id="start"
+        id="start"
         background="#e3e3e3"
         height="800px"
         style={{ "flex-wrap": "wrap" }}
@@ -33,11 +33,25 @@ export default function MainPage() {
         >
           <Flex id="start-slider" background="#E3E3E3">
             <Swiper
-              slidesPerView={3}
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={2}
               spaceBetween={10}
-              pagination={{
-                clickable: true,
+              autoplay={{
+                delay: 2800,
+                disableOnInteraction: false,
               }}
+              loop={true}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 4,
+                slideShadows: true,
+              }}
+              pagination={true}
+              modules={[Autoplay, EffectCoverflow, Pagination]}
               className="mySwiper"
             >
               <SwiperSlide>
@@ -75,7 +89,7 @@ export default function MainPage() {
           style={{
             flex: 3,
             opacity: 0.3,
-            height:"100%"
+            height: "100%",
           }}
         >
           {/* {" "} */}

@@ -40,7 +40,7 @@
 
 @media (max-width: 800px) {
   #start {
-    height: max-content;
+    height: 80vh;
   }
   #start-slider {
     height: 300px;
