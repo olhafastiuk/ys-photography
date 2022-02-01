@@ -19,12 +19,7 @@ export default function MainPage() {
   SwiperCore.use([EffectCoverflow, Pagination]);
   return (
     <main>
-      <Flex
-        id="start"
-        background="#e3e3e3"
-        height="800px"
-        style={{ "flex-wrap": "wrap" }}
-      >
+      <Flex id="firstScreen" background="#e3e3e3" height="80vh">
         <Flex
           direction="column"
           align="center"
@@ -72,16 +67,17 @@ export default function MainPage() {
             </Swiper>
           </Flex>
           <Flex
+            className="firstScreen-text"
             width="80%"
+            height="30vh"
             align="center"
             justify="center"
-            margin="-15% 0 70px"
+            margin="-15vh 0 5vh 0"
             background="rgba(255, 255, 255, 0.8)"
             radius="20px"
-            padding="5%"
-            height="60%"
+            padding="5px 20%"
           >
-            <Image width="60%" src={decor} alt="" fluid />
+            <Image height="100%" src={decor} alt="" />
           </Flex>
         </Flex>
         <Flex

@@ -1,3 +1,8 @@
+#start-slider {
+  height: 60vh;
+  width: 800px;
+}
+
 .mainBlock h1 {
   font-family: "Forum", cursive;
   font-style: normal;
@@ -23,11 +28,6 @@
   color: #413131;
 }
 
-#start-slider {
-  height: 500px;
-  width: 800px;
-}
-
 .response {
   margin-left: -25% !important;
 }
@@ -36,61 +36,6 @@
   margin-bottom: 20px;
   font-style: 60px;
   font-style: italic;
-}
-
-@media (max-width: 800px) {
-  #start {
-    height: 80vh;
-  }
-  #start-slider {
-    height: 300px;
-    width: 100vw;
-  }
-
-  .mainBlock h1,
-  .response h1 {
-    font-size: 35px;
-    line-height: 3.2rem;
-  }
-  .mainBlock p, .response p {
-    font-size: 14px;
-  }
-}
-@media (max-width: 500px) {
-  .mainBlock h1 {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-  }
-  .mainBlock p {
-    font-size: 8px;
-    line-height: 1rem;
-  }
-}
-.decor {
-  font-size: 5vw;
-  letter-spacing: 1em;
-  text-align: center;
-  color: rgba(218, 187, 187, 0.904);
-}
-
-.gallery {
-  column-count: 3;
-  column-width: 33%;
-  padding: 0 15%;
-}
-@media (max-width: 800px) {
-  .gallery {
-    -webkit-column-count: 2;
-    column-count: 2;
-    column-width: 50%;
-  }
-}
-@media (max-width: 500px) {
-  .gallery {
-    -webkit-column-count: 1;
-    column-count: 1;
-    column-width: 100%;
-  }
 }
 
 .gallery > img {
@@ -148,4 +93,73 @@
 .swiper p {
   color: white;
   text-align: start;
+}
+
+@media (max-width: 880px) {
+  #start-slider {
+    width: 100vw;
+  }
+
+  .firstScreen-text {
+    height: 20vh !important;
+  }
+
+  .mainBlock h1,
+  .response h1 {
+    font-size: 35px;
+    line-height: 3.2rem;
+  }
+  .mainBlock p,
+  .response p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  #firstScreen {
+    height: 40vh;
+  }
+  #start-slider {
+    height: 30vh;
+    width: 100vw;
+  }
+
+  .firstScreen-text {
+    height: 15vh !important;
+    margin: -8vh 0 0 0 !important;
+  }
+  .mainBlock h1 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+  .mainBlock p {
+    font-size: 8px;
+    line-height: 1rem;
+  }
+}
+.decor {
+  font-size: 5vw;
+  letter-spacing: 1em;
+  text-align: center;
+  color: rgba(218, 187, 187, 0.904);
+}
+
+.gallery {
+  column-count: 3;
+  column-width: 33%;
+  padding: 0 15%;
+}
+@media (max-width: 800px) {
+  .gallery {
+    -webkit-column-count: 2;
+    column-count: 2;
+    column-width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .gallery {
+    -webkit-column-count: 1;
+    column-count: 1;
+    column-width: 100%;
+  }
 }
