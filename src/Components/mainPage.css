@@ -83,6 +83,11 @@
 }
 
 @media (max-width: 880px) {
+  #firstScreen {
+    padding-top: 5vh;
+    height: 90vh;
+  }
+
   #start-slider {
     width: 100vw;
   }
@@ -116,6 +121,8 @@
 @media (max-width: 500px) {
   #firstScreen {
     height: 40vh;
+    padding-top: 0vh;
+
   }
   #start-slider {
     height: 30vh;

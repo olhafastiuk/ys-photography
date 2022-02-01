@@ -78,27 +78,27 @@ export default function Footer() {
         <Col lg={6} md={5} xs={4}>
           <Flex direction="column" className="footer-nav">
             <LinK to="/">
-              <p style={{ lineHeight: " 1.4rem", fontSize: "1.4rem" }}>
+              <p style={{ lineHeight: " 2rem", fontSize: "1.4rem" }}>
                 Головна
               </p>
             </LinK>
             <LinK to="/about">
-              <p style={{ lineHeight: " 1.4rem", fontSize: "1.4rem" }}>
+              <p style={{ lineHeight: " 2rem", fontSize: "1.4rem" }}>
                 Про мене
               </p>
             </LinK>
             <LinK to="/gallery">
-              <p style={{ lineHeight: " 1.4rem", fontSize: "1.4rem" }}>
+              <p style={{ lineHeight: " 2rem", fontSize: "1.4rem" }}>
                 Галерея
               </p>
             </LinK>
             <LinK to="/price">
-              <p style={{ lineHeight: " 1.4rem", fontSize: "1.4rem" }}>
+              <p style={{ lineHeight: " 2rem", fontSize: "1.4rem" }}>
                 Пакети послуг
               </p>
             </LinK>
             <LinK to="/contacts">
-              <p style={{ lineHeight: " 1.4rem", fontSize: "1.4rem" }}>
+              <p style={{ lineHeight: " 2rem", fontSize: "1.4rem" }}>
                 Контакти
               </p>
             </LinK>

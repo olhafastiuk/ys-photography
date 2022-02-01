@@ -4,8 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Flex } from "../styles/CommonStyle";
 import { Parallax, Background } from "react-parallax";
 import "./contacts.css";
-import f2 from "../images/gallery/2.jpeg";
-import f3 from "../images/gallery/3.jpeg";
+
 import { Photos } from "./Arrays";
 
 export default function Contacts() {
@@ -17,8 +16,13 @@ export default function Contacts() {
 
   return (
     <main>
-      <Flex height="20vh" background="#e3e3e3" align="center" justify="center">
-        <h1>CONTACTS</h1>
+      <Flex
+        padding="0 0 5vh"
+        background="#e3e3e3"
+        align="center"
+        justify="center"
+      >
+        <h1 style={{ letterSpacing: "0.4rem" }}>КОНТАКТИ</h1>
       </Flex>
       <Parallax
         bgImage="https://images.pexels.com/photos/5852476/pexels-photo-5852476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -28,6 +32,7 @@ export default function Contacts() {
           <Flex color="white" align="center" justify="center" height="100%">
             <h2
               style={{
+                letterSpacing: "0.2rem",
                 textAlign: "center",
                 "text-shadow": "1px 1px 1px light-gray",
               }}
@@ -37,19 +42,19 @@ export default function Contacts() {
           </Flex>
         </div>
       </Parallax>
-      <Flex id="contacts" padding="0 8%" justify="center" align="center">
+      <Flex id="contacts" padding="0 5.5rem" justify="center" align="center">
         <Flex
           direction="column"
           background="#e7c3c3"
           align="start"
           justify="center"
           width="33%"
-          padding="3% 5% "
+          padding=" 5% "
           margin="-15% 0 0"
           position="relative"
           height="max-content"
           z="1"
-          style={{ "min-width": "300px" }}
+          style={{ "min-width": "400px" }}
         >
           <Flex
             width="100%"
@@ -78,7 +83,7 @@ export default function Contacts() {
           >
             <h3>КОНТАКТНА ІНФОРМАЦІЯ</h3>
             <p>Зателефонуйте за номером </p>
-            <p style={{ margin: "-16px 0 0 0" }}>
+            <p>
               <a href="tel: +380979092200"> +380 97 909 2200</a>
             </p>
             <p>або напишіть повідомлення використовуючи форму нижче</p>
@@ -109,7 +114,7 @@ export default function Contacts() {
           justify="center"
           align="center"
           margin="20px -35px"
-          width="67%"
+          padding="0 5%"
           position="relative"
           z="2"
         >
@@ -119,7 +124,7 @@ export default function Contacts() {
                 style={{
                   "max-width": "30%",
                   "min-width": "127px",
-                  margin: "5px",
+                  margin: "3px",
                   "aspect-ratio": "1/1",
                   "object-fit": "cover",
                 }}
@@ -134,21 +139,32 @@ export default function Contacts() {
         bgImage="https://images.pexels.com/photos/4623060/pexels-photo-4623060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         strength={500}
       >
-        <Flex direction="column" margin="100px 0" justify="center" align="center">
+        <Flex
+          direction="column"
+          margin="20vh 0"
+          // height="45vh"
+          justify="center"
+          align="center"
+        >
           <h1
             style={{
-              margin: "0 0 -17px",
+              margin: "0 0 -20px",
               color: "white",
-              "font-size": "330%",
+              "font-size": "5rem",
               "font-weight": "500",
+              "text-shadow": "0px 0px 20px rgba(17, 12, 46, 0.5)",
+              letterSpacing: "0.2rem",
             }}
           >
             Contact Form
           </h1>
           <Flex
-            padding="5%"
-            margin="0 2%"
-            radius="30px"
+            style={{
+              "box-shadow": "rgba(17, 12, 46, 0.3) 0px 48px 100px 0px",
+            }}
+            margin="0 5rem"
+            width="auto"
+            padding="5rem"
             background="white"
             justify="center"
             align="center"
@@ -156,18 +172,33 @@ export default function Contacts() {
             <Form>
               <Flex width="100%" justify="space-between">
                 <Form.Group style={{ margin: "1px" }} className="mb-3">
-                  <Form.Control type="text" placeholder="Ваше імʼя" />
+                  <Form.Control
+                    style={{ fontSize: "1.8rem" }}
+                    type="text"
+                    placeholder="Імʼя"
+                  />
                 </Form.Group>
                 <Form.Group style={{ margin: "1px" }} className="mb-3">
-                  <Form.Control type="phone" placeholder="Ваш номер телефону" />
+                  <Form.Control
+                    style={{ fontSize: "1.8rem" }}
+                    type="phone"
+                    placeholder="Телефон"
+                  />
                 </Form.Group>
               </Flex>
               <Form.Group style={{ margin: "1px" }} className="mb-3">
-                  <Form.Control type="email" placeholder="Ваш email" />
-                </Form.Group>
-              <Form.Group className="mb-8">
-                <Form.Label>Бажана дата</Form.Label>
                 <Form.Control
+                  style={{ fontSize: "1.8rem" }}
+                  type="email"
+                  placeholder="Еmail"
+                />
+              </Form.Group>
+              <Form.Group className="mb-8">
+                <Form.Label style={{ fontSize: "1.8rem" }}>
+                  Бажана дата
+                </Form.Label>
+                <Form.Control
+                  style={{ fontSize: "1.8rem" }}
                   type="date"
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
@@ -178,7 +209,7 @@ export default function Contacts() {
                 controlId="exampleForm.ControlTextarea1"
               >
                 <Form.Control
-                  style={{ margin: "10px 1px" }}
+                  style={{ margin: "10px 1px", fontSize: "1.8rem" }}
                   as="textarea"
                   placeholder="Коментар..."
                   rows={3}
@@ -188,6 +219,7 @@ export default function Contacts() {
                 <Button
                   variant="light"
                   style={{
+                    fontSize: "1.8rem",
                     color: "white",
                     background: "#e7c3c3",
                     "border-color": "#e7c3c3",

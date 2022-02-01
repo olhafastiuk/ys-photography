@@ -108,7 +108,7 @@ export default function MainPage() {
           width="100%"
           align="center"
           justify="center"
-          margin="-2.7rem 0 0 0"
+          margin="-1rem 0 2rem 0"
         >
           <p className="decor">GALLERY</p>
         </Flex>
@@ -195,7 +195,13 @@ export default function MainPage() {
                 direction="column"
                 color="white"
               >
-                <h1 style={{ textAlign: "center", fontSize: "4rem", fontStyle:"italic" }}>
+                <h1
+                  style={{
+                    textAlign: "center",
+                    fontSize: "4rem",
+                    fontStyle: "italic",
+                  }}
+                >
                   {`"${el.title}"`}
                 </h1>
                 <p style={{ textAlign: "center", fontSize: "1.5rem" }}>
