@@ -5,15 +5,10 @@ import "./mainPage.css";
 import decor from "../images/pwf.svg";
 import { Flex } from "../styles/CommonStyle";
 import pp from "../images/photo.jpg";
-import f1 from "../images/gallery/1.jpeg";
-import f2 from "../images/gallery/2.jpeg";
-import f3 from "../images/gallery/3.jpeg";
-import f4 from "../images/gallery/4.jpeg";
-import f5 from "../images/gallery/5.jpeg";
-
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import "swiper/swiper.min.css";
 import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from "swiper";
+import { Photos, SliderPhoto } from "./Arrays";
 
 export default function MainPage() {
   SwiperCore.use([EffectCoverflow, Pagination]);
@@ -49,21 +44,11 @@ export default function MainPage() {
               modules={[Autoplay, EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              <SwiperSlide>
-                <img src={f1} alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={f2} alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={f3} alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={f4} alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={f5} alt="" />
-              </SwiperSlide>
+              {SliderPhoto.map((el) => (
+                <SwiperSlide>
+                  <img src={el} alt="" />
+                </SwiperSlide>
+              ))}
             </Swiper>
           </Flex>
           <Flex
@@ -116,19 +101,30 @@ export default function MainPage() {
         direction="column"
         height="fit-content"
         maxHeight="fit-content"
+        align="center"
         background="#E3E3E3"
       >
-        <Flex width="100%" align="center" justify="center" margin="-4% 0 0 0">
+        <Flex
+          width="100%"
+          align="center"
+          justify="center"
+          margin="-2.7rem 0 0 0"
+        >
           <p className="decor">GALLERY</p>
         </Flex>
-        <div className="gallery">
-          <img src={f1} alt="" />
-          <img src={f2} alt="" />
-          <img src={f3} alt="" />
-          <img src={f4} alt="" />
-          <img src={f5} alt="" />
-          <img src={f1} alt="" />
-        </div>
+        <Flex
+          height="fit-content"
+          maxHeight="fit-content"
+          justify="center"
+          align="center"
+          margin="0 0  2rem 0"
+          style={{ maxWidth: "1500px", flexWrap: "wrap" }}
+          className="gallery"
+        >
+          {Photos.map((el) => (
+            <img src={el} alt="" />
+          ))}
+        </Flex>
       </Flex>
       <Flex
         direction="column"

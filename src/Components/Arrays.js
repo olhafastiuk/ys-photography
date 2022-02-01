@@ -5,3 +5,4 @@ import f4 from "../images/gallery/4.jpeg";
 import f5 from "../images/gallery/5.jpeg";
 
 export let Photos = [f1, f2, f3, f4, f5, f1];
+export let SliderPhoto = [f1, f2, f3, f4, f5];

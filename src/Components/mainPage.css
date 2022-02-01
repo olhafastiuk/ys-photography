@@ -2,56 +2,6 @@
   height: 60vh;
   width: 800px;
 }
-
-.mainBlock h1 {
-  font-family: "Forum", cursive;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 3.8rem;
-  line-height: 4rem;
-  text-align: center;
-  letter-spacing: 0.035em;
-  color: #db8e8e;
-  margin-bottom: 5%;
-}
-
-.mainBlock p {
-  /* font-family: Neutra Text; */
-  font-family: "Forum", cursive;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.2rem;
-  line-height: 1.7rem;
-  text-align: center;
-  letter-spacing: 0.28rem;
-  color: #413131;
-}
-
-.response {
-  margin-left: -25% !important;
-}
-
-.response h1 {
-  margin-bottom: 20px;
-  font-style: 60px;
-  font-style: italic;
-}
-
-.gallery > img {
-  width: 100%;
-  max-width: 350px;
-  /* height: 300px; */
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  transition: all 350ms ease;
-  margin-bottom: 30px;
-}
-
-.row {
-  justify-content: center;
-  align-items: center;
-}
-
 .swiper {
   width: 100%;
   height: 100%;
@@ -94,6 +44,61 @@
   text-align: start;
 }
 
+.mainBlock h1 {
+  font-family: "Forum", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.8rem;
+  line-height: 4rem;
+  text-align: center;
+  letter-spacing: 0.035em;
+  color: #db8e8e;
+  margin-bottom: 5%;
+}
+
+.mainBlock p {
+  font-family: "Forum", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  text-align: center;
+  letter-spacing: 0.28rem;
+  color: #413131;
+}
+
+.decor {
+  font-size: 3.7rem;
+  letter-spacing: 4rem;
+  margin-left: 4rem;
+  text-align: center;
+  color: rgba(218, 187, 187, 0.904);
+}
+
+.gallery > img {
+  width: 100%;
+  max-width: 21rem;
+  height: 28rem;
+  object-fit: cover;
+  transition: all 350ms ease;
+  margin: 1rem;
+}
+
+.row {
+  justify-content: center;
+  align-items: center;
+}
+
+.response {
+  margin-left: -25% !important;
+}
+
+.response h1 {
+  margin-bottom: 20px;
+  font-style: 60px;
+  font-style: italic;
+}
+
 @media (max-width: 880px) {
   #start-slider {
     width: 100vw;
@@ -126,34 +131,5 @@
   .firstScreen-text {
     height: 15vh !important;
     margin: -8vh 0 0 0 !important;
-  }
-  .mainBlock {
-    height: 40vh !important;
-  }
-}
-.decor {
-  font-size: 5vw;
-  letter-spacing: 1em;
-  text-align: center;
-  color: rgba(218, 187, 187, 0.904);
-}
-
-.gallery {
-  column-count: 3;
-  column-width: 33%;
-  padding: 0 15%;
-}
-@media (max-width: 800px) {
-  .gallery {
-    -webkit-column-count: 2;
-    column-count: 2;
-    column-width: 50%;
-  }
-}
-@media (max-width: 500px) {
-  .gallery {
-    -webkit-column-count: 1;
-    column-count: 1;
-    column-width: 100%;
   }
 }
