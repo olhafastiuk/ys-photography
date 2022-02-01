@@ -8,7 +8,7 @@ import pp from "../images/photo.jpg";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import "swiper/swiper.min.css";
 import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from "swiper";
-import { Photos, SliderPhoto } from "./Arrays";
+import { Photos, questions, SliderPhoto } from "./Arrays";
 
 export default function MainPage() {
   SwiperCore.use([EffectCoverflow, Pagination]);
@@ -128,68 +128,34 @@ export default function MainPage() {
       </Flex>
       <Flex
         direction="column"
-        padding="5%"
+        padding="2.5rem 3rem"
         justify="center"
         align="center"
         bgimg="https://media.istockphoto.com/photos/gray-shadows-of-the-flowers-and-grass-picture-id1164993369?k=20&m=1164993369&s=612x612&w=0&h=_lxBLJPiVYqRTwzGGEu0sOGSclUGAqZAi4yELGJOLMo="
         style={{
-          "background-size": "500px",
+          "background-size": "35rem",
           "background-position": "left bottom",
         }}
       >
-        <h1 style={{ "padding-bottom": "3%" }}>Поширені запитання</h1>
+        <h1 style={{ fontSize: "3.5rem", "padding-bottom": "2rem" }}>
+          Поширені запитання
+        </h1>
         <Flex
           direction="row"
           style={{ "flex-wrap": "wrap", "text-align": "center" }}
           justify="center"
         >
-          <Flex direction="column" align="center" width="250px" padding="1%">
-            <h3>Якесь часте запитання?</h3>
-            <p>
-              Ось коротка відповідь, яка допоможе відвідувачам і потенційним
-              клієнтам отримати відповідь на поширене запитання.
-            </p>
-          </Flex>
-          <Flex direction="column" align="center" width="250px" padding="1%">
-            <h3>Якесь запитання?</h3>
-            <p>Ось коротка відповідь.</p>
-          </Flex>
-          <Flex direction="column" align="center" width="250px" padding="1%">
-            <h3>Якесь часте запитання?</h3>
-            <p>
-              Ось коротка відповідь, яка допоможе відвідувачам і потенційним
-              клієнтам отримати відповідь на поширене запитання.
-            </p>
-          </Flex>
-          <Flex direction="column" align="center" width="250px" padding="1%">
-            <h3>Якесь часте запитання?</h3>
-            <p>Ось коротка відповідь.</p>
-          </Flex>
-          <Flex direction="column" align="center" width="250px" padding="1%">
-            <h3>Якесь часте запитання?</h3>
-            <p>Ось коротка відповідь.</p>
-          </Flex>
-          <Flex direction="column" align="center" width="250px" padding="1%">
-            <h3>Якесь часте запитання?</h3>
-            <p>
-              Ось коротка відповідь, яка допоможе відвідувачам і потенційним
-              клієнтам отримати відповідь на поширене запитання.
-            </p>
-          </Flex>
-          <Flex direction="column" align="center" width="250px" padding="1%">
-            <h3>Якесь часте запитання?</h3>
-            <p>
-              Ось коротка відповідь, яка допоможе відвідувачам і потенційним
-              клієнтам отримати відповідь на поширене запитання.
-            </p>
-          </Flex>
-          <Flex direction="column" align="center" width="250px" padding="1%">
-            <h3>Якесь часте запитання?</h3>
-            <p>
-              Ось коротка відповідь, яка допоможе відвідувачам і потенційним
-              клієнтам отримати відповідь на поширене запитання.
-            </p>
-          </Flex>
+          {questions.map((el) => (
+            <Flex
+              direction="column"
+              align="center"
+              width="22rem"
+              padding="0.5rem"
+            >
+              <h2 style={{ fontSize: "1.9rem" }}>{el.title}</h2>
+              <p style={{ fontSize: "1.4rem" }}>{el.text}</p>
+            </Flex>
+          ))}
         </Flex>
       </Flex>
       <Flex
