@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Form, Image, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Flex } from "../styles/CommonStyle";
-import { Parallax, Background } from "react-parallax";
+import { Parallax } from "react-parallax";
 import "./contacts.css";
 
 import { Photos } from "./Arrays";
