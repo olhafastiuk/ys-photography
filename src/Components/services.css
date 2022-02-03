@@ -9,6 +9,11 @@
   columns: 25rem auto;
 }
 
+.article-2__text {
+  text-align: left;
+  width: 70%;
+  margin: 2rem;
+}
 .card-img {
   width: 100%;
   aspect-ratio: 1/1;
