@@ -34,7 +34,7 @@ export default function Navigation() {
                   <LinK to="/gallery">Галерея</LinK>
                 </Nav.Link>
                 <Nav.Link>
-                  <LinK to="/price">Пакети послуг</LinK>
+                  <LinK to="/services">Пакети послуг</LinK>
                 </Nav.Link>
                 <Nav.Link>
                   <LinK to="/contacts">Контакти</LinK>
@@ -63,7 +63,7 @@ export default function Navigation() {
                     <LinK to="/gallery">Галерея</LinK>
                   </Nav.Link>
                   <Nav.Link>
-                    <LinK to="/price">Пакети послуг</LinK>
+                    <LinK to="/services">Пакети послуг</LinK>
                   </Nav.Link>
                   <Nav.Link>
                     <LinK to="/contacts">Контакти</LinK>

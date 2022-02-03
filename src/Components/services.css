@@ -1,0 +1,28 @@
+.article-1__img {
+  width: 33vw;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.article-1__text {
+  text-align: left;
+  columns: 25rem auto;
+}
+
+@media (max-width: 1150px) {
+  .article-1 {
+    margin-top: 3rem !important;
+    flex-direction: column-reverse !important;
+  }
+  .article-1__img {
+    width: 80vw;
+    aspect-ratio: 1/1;
+  }
+
+  .article-1__text {
+    font-size: 2.3rem;
+    letter-spacing: -0.01rem;
+    line-height: 3rem;
+    columns: 1;
+  }
+}

@@ -40,16 +40,18 @@ export default function About() {
             >
               MY PHOTOGRAPHY STORY
             </p>
-            <h1
+            <h3
               style={{
                 fontSize: "6rem",
+                marginBottom: "3rem",
+                padding: "2rem",
                 // fontStyle: "italic",
                 borderBottom: "1px solid rgba(179, 153, 125, 0.4)",
                 color: "rgb(179 153 125)",
               }}
             >
               Article Title
-            </h1>
+            </h3>
             <p className="article-1__text">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum at
               cumque ad nisi aliquid consequuntur ullam sed maiores, autem

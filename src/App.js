@@ -9,6 +9,7 @@ import "./App.css";
 
 import Navigation from "./Components/Navigation";
 import Footer from "./Components/Footer";
+import Services from "./Components/Services";
 
 function App() {
   const match = useRouteMatch();
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route exact path="/about">
           <About />
+        </Route>
+        <Route exact path="/services">
+          <Services />
         </Route>
         <Route exact path="/gallery">
           <Gallery />

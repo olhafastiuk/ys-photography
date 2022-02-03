@@ -5,10 +5,18 @@ import { Flex } from "../styles/CommonStyle";
 import { Parallax, Background } from "react-parallax";
 import { Photos } from "./Arrays";
 import f2 from "../images/gallery/3.jpeg";
+import "./services.css";
 
 export default function Services() {
   return (
     <main>
+      <Flex
+        background="#e3e3e3"
+        direction="column"
+        align="center"
+        justify="center"
+        height="10.5vh"
+      ></Flex>
       <Parallax
         bgImage="https://images.pexels.com/photos/4623060/pexels-photo-4623060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         strength={500}
@@ -42,21 +50,32 @@ export default function Services() {
           </Flex>
         </div>
       </Parallax>
-      <Flex height="100%">
-        <Flex padding="5%" width="60%" direction="column" height="max-content">
+      <Flex
+        className="article-1"
+        align="center"
+        justify="center"
+        background="white"
+        height="fit-content"
+      >
+        <Flex
+          direction="column"
+          align="center"
+          justify="center"
+          padding="5rem 3rem 10rem 3rem"
+        >
           <h3
             style={{
-              "align-self": "center",
-              fontSize: "40px",
-              fontStyle: "italic",
-              textAlign: "center",
-              marginBottom: "50px",
-              letterSpacing: "0.05em",
+              fontSize: "4rem",
+              marginBottom: "3rem",
+              padding: "2rem",
+
+              borderBottom: "1px solid rgba(159, 76, 100, 0.4)",
+              color: "rgb(159 76 100)",
             }}
           >
-            Досвід, який ви оціните
+            Article Title
           </h3>
-          <p style={{ columnCount: "2", columnGap: "30px" }}>
+          <p className="article-1__text">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis
             alias qui consectetur aut, debitis harum labore veniam velit iste
             fugiat odio sit delectus quidem consequatur. Est necessitatibus
@@ -77,20 +96,7 @@ export default function Services() {
             voluptatum perspiciatis error!
           </p>
         </Flex>
-        <Flex
-          position="relative"
-          bgimg={f2}
-          style={{
-            "background-position": "center",
-            "background-size": "cover",
-            overflow: "hidden",
-            "align-self": "center",
-          }}
-          width="40%"
-          height="80vh"
-        >
-          {/* <Image style={{"object-fit": "cover",}}  src={f2} alt="" /> */}
-        </Flex>
+        <Image className="article-1__img" src={f2} alt="" />
       </Flex>
       <Parallax
         bgImage="https://images.pexels.com/photos/4623060/pexels-photo-4623060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -139,9 +145,7 @@ export default function Services() {
           </Flex>
         </div>
       </Parallax>
-      <Flex
-        direction="column" align="center"
-      >
+      <Flex direction="column" align="center">
         <h1>Як підготуватися до фотосесії вагітності</h1>
         <div>
           <h3>Вибираємо дату фотосесії</h3>
