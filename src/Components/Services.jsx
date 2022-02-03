@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import { Container, Form, Image, Button } from "react-bootstrap";
+import React from "react";
+import { Image } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Flex } from "../styles/CommonStyle";
-import { Parallax, Background } from "react-parallax";
-import { Photos } from "./Arrays";
+import { Parallax } from "react-parallax";
+import { products } from "./Arrays";
 import f2 from "../images/gallery/3.jpeg";
 import "./services.css";
+import ProductCard from "./ProductCard";
 
 export default function Services() {
   return (
@@ -102,48 +103,27 @@ export default function Services() {
         bgImage="https://images.pexels.com/photos/4623060/pexels-photo-4623060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         strength={500}
       >
-        <div style={{ height: "max-content", padding: 0 }}>
+        <Flex padding="1rem" justify="center" align="center">
           <Flex
-            background="rgba(0, 0, 0, 0.2)"
-            color="white"
             align="center"
             justify="center"
-            height="100%"
+            margin="3rem 0"
+            style={{
+              flexWrap: "wrap",
+            }}
           >
-            <Flex margin="50px" width="60%" justify="center" align="center">
-              <Flex
-                direction="column"
-                background="white"
-                align="start"
-                justify="center"
-                padding="3% 5% "
-                height="max-content"
-              >
-                <p>
-                  Вартість фотосесії в студії - 2700 грн.
-                  <br />В вартість входить:
-                  <br />- 1,5 год зйомки;
-                  <br />- 1,5 год оренди залу в студії Fabrik (м.Львів ,
-                  вул.Дашкевича,3);
-                  <br />- 15 оброблених фото; <br />- усі оригінали фотографій
-                  (приблизно 500 фото, які отримаєте в день зйомки ). <br />-
-                  допомога з позуванням (підказую пози, як встати , куди
-                  нахилити голову і т.п.). <br />
-                  Макіяж/зачіска в вартість зйомки не входять (можу порадити
-                  перукаря та візажиста). <br />
-                  Період обробки фото - до 5 тижнів. Вибір фото для обробки Ви
-                  здійснюєте самі (за бажанням). <br />
-                  За 1,5 зйомки можна змінити 3-4 образи. <br />
-                  При бронюванні зйомки на конкретну дату потрібно внести
-                  передоплату 450 грн за оренду залу. <br />
-                  Повна оплата фотосесії здійснюється в день зйомки. <br />{" "}
-                  Бронювання зйомки бажано проводити за 2-3 тижні до бажаної
-                  дати.
-                </p>
-              </Flex>
-            </Flex>
+            {products.map((el) => (
+              <ProductCard
+                photo={el.photo}
+                title={el.title}
+                price={el.price}
+                description={el.description.map((l) => (
+                  <li>{l}</li>
+                ))}
+              />
+            ))}
           </Flex>
-        </div>
+        </Flex>
       </Parallax>
       <Flex direction="column" align="center">
         <h1>Як підготуватися до фотосесії вагітності</h1>
