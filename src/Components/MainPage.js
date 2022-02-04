@@ -148,10 +148,11 @@ export default function MainPage() {
         >
           {questions.map((el) => (
             <Flex
+              className="question"
               direction="column"
               align="center"
-              width="22rem"
-              padding="0.5rem"
+              width="25rem"
+              padding="2rem"
             >
               <h2 style={{ fontSize: "1.9rem" }}>{el.title}</h2>
               <p style={{ fontSize: "1.4rem" }}>{el.text}</p>
@@ -159,7 +160,7 @@ export default function MainPage() {
           ))}
         </Flex>
       </Flex>
-      <Flex
+      {/* <Flex
         bgimg="https://images.pexels.com/photos/5853183/pexels-photo-5853183.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         // bgimg="https://images.pexels.com/photos/8747009/pexels-photo-8747009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         // bgimg="https://images.pexels.com/photos/8165548/pexels-photo-8165548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -232,7 +233,7 @@ export default function MainPage() {
             ЗАБРОНЮВАТИ ЗАРАЗ
           </a>
         </Flex>
-      </Flex>
+      </Flex> */}
     </main>
   );
 }

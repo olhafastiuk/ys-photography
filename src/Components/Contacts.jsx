@@ -48,13 +48,13 @@ export default function Contacts() {
           background="#e7c3c3"
           align="start"
           justify="center"
-          width="33%"
-          padding=" 5% "
+          width="45%"
+          padding=" 3rem "
           margin="-15% 0 0"
           position="relative"
           height="max-content"
           z="1"
-          style={{ "min-width": "400px" }}
+          style={{ "min-width": "250px" }}
         >
           <Flex
             width="100%"

@@ -47,7 +47,7 @@ export default function Navigation() {
               <Navbar.Toggle
                 aria-controls="offcanvasNavbar"
                 onClick={() => {
-                  showMenu ? setShowMenu(false) : setShowMenu(true);
+                  setShowMenu(true);
                 }}
               />
             </Col>
@@ -55,10 +55,11 @@ export default function Navigation() {
               id="offcanvasNavbar"
               aria-labelledby="offcanvasNavbarLabel"
               placement="end"
-              show={showMenu}
+              // show={showMenu}
+              onClick={() => setShowMenu(false)}
             >
-              <Offcanvas.Header onClick={() => setShowMenu(false)} closeButton>
-                {/* <Offcanvas.Title>Меню</Offcanvas.Title> */}
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title></Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="me-auto">

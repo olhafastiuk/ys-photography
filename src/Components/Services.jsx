@@ -16,7 +16,7 @@ export default function Services() {
         direction="column"
         align="center"
         justify="center"
-        height="10.5vh"
+        height="7.5vh"
       ></Flex>
       <Parallax
         bgImage="https://images.pexels.com/photos/4623060/pexels-photo-4623060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"

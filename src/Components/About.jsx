@@ -18,18 +18,18 @@ export default function About() {
         </h1>
 
         <Flex
-          className="article-1"
-          align="center"
+          className="article"
+          // align="center"
           justify="center"
           background="white"
           height="fit-content"
         >
-          <Image className="article-1__img" src={photo} alt="" />
+          <Image className="article__img" src={photo} alt="" />
           <Flex
             direction="column"
             align="center"
             justify="center"
-            padding="5rem 3rem 10rem 3rem"
+            padding="5rem 3rem 0 3rem"
           >
             <p
               style={{
@@ -42,7 +42,7 @@ export default function About() {
             </p>
             <h3
               style={{
-                fontSize: "6rem",
+                fontSize: "5.5rem",
                 marginBottom: "3rem",
                 padding: "2rem",
                 // fontStyle: "italic",
@@ -52,7 +52,7 @@ export default function About() {
             >
               Article Title
             </h3>
-            <p className="article-1__text">
+            <p className="article__text">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum at
               cumque ad nisi aliquid consequuntur ullam sed maiores, autem
               accusamus, veritatis temporibus amet. Necessitatibus modi iure

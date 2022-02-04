@@ -70,7 +70,7 @@
 
 .gallery > img {
   width: 100%;
-  max-width: 21rem;
+  max-width: 25rem;
   height: 28rem;
   object-fit: cover;
   transition: all 350ms ease;
@@ -143,5 +143,9 @@
   }
   .mainBlock {
     height: 40vh !important;
+  }
+  .question {
+    padding: 0 !important;
+    width: 90vw !important;
   }
 }
