@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Button } from "react-bootstrap";
 import { Flex } from "../styles/CommonStyle";
-import "./services.css";
+import "../styles/services.css";
 
 export default function ProductCard({ photo, title, price, description }) {
   return (

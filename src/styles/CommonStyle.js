@@ -31,28 +31,10 @@ export const Flex = (props) => {
   return <StyledFlex {...props} />;
 };
 
-const StyledIMG = styled.img`
-  margin: ${({ margin }) => margin || "0"};
-  width: ${(props) => props.width || "auto"};
-  height: ${(props) => props.height || "auto"};
-  position: ${(props) => props.position};
-  right: ${(props) => props.right};
-  left: ${(props) => props.left};
-  bottom: ${(props) => props.bottom};
-  top: ${(props) => props.top};
-  border-radius: ${(props) => props.radius};
-  box-shadow: ${(props) => props.shadow};
-`;
-
-export const Img = (props) => {
-  return <StyledIMG {...props} />;
-};
-
 const LinkStyler = styled(Link)`
   font-family: 'Forum', cursive;
   font-style: normal;
   font-weight: 500;
-  font-size: 1.8rem !important;
   display: flex;
   align-items: center;
   text-align: center;

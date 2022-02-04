@@ -10,11 +10,12 @@ import "./App.css";
 import Navigation from "./Components/Navigation";
 import Footer from "./Components/Footer";
 import Services from "./Components/Services";
+import { Fragment } from "react";
 
 function App() {
   const match = useRouteMatch();
   return (
-    <div>
+    <Fragment>
       <Navigation />
       <Switch>
         <Route exact path="/">
@@ -34,7 +35,7 @@ function App() {
         </Route>
       </Switch>
       <Footer />
-    </div>
+    </Fragment>
   );
 }
 

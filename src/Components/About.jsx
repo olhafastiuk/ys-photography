@@ -2,7 +2,7 @@ import React from "react";
 import { Flex } from "../styles/CommonStyle";
 import photo from "../images/about.jpg";
 import { Image } from "react-bootstrap";
-import "./about.css";
+import "../styles/about.css";
 
 export default function About() {
   return (

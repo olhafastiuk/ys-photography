@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./mainPage.css";
+import "../styles/mainPage.css";
 import decor from "../images/pwf.svg";
 import { Flex } from "../styles/CommonStyle";
 import pp from "../images/photo.jpg";

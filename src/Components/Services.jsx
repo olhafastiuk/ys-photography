@@ -5,7 +5,7 @@ import { Flex } from "../styles/CommonStyle";
 import { Parallax } from "react-parallax";
 import { products } from "./Arrays";
 import f2 from "../images/gallery/3.jpeg";
-import "./services.css";
+import "../styles/services.css";
 import ProductCard from "./ProductCard";
 
 export default function Services() {
