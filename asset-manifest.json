@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ys-photography/static/css/main.2451df29.chunk.css",
-    "main.js": "/ys-photography/static/js/main.ddbd0b3f.chunk.js",
-    "main.js.map": "/ys-photography/static/js/main.ddbd0b3f.chunk.js.map",
+    "main.css": "/ys-photography/static/css/main.5ac5d1c0.chunk.css",
+    "main.js": "/ys-photography/static/js/main.9a36c124.chunk.js",
+    "main.js.map": "/ys-photography/static/js/main.9a36c124.chunk.js.map",
     "runtime-main.js": "/ys-photography/static/js/runtime-main.971c10a0.js",
     "runtime-main.js.map": "/ys-photography/static/js/runtime-main.971c10a0.js.map",
     "static/css/2.08002d80.chunk.css": "/ys-photography/static/css/2.08002d80.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.e7a51a61.chunk.js.map": "/ys-photography/static/js/3.e7a51a61.chunk.js.map",
     "index.html": "/ys-photography/index.html",
     "static/css/2.08002d80.chunk.css.map": "/ys-photography/static/css/2.08002d80.chunk.css.map",
-    "static/css/main.2451df29.chunk.css.map": "/ys-photography/static/css/main.2451df29.chunk.css.map",
+    "static/css/main.5ac5d1c0.chunk.css.map": "/ys-photography/static/css/main.5ac5d1c0.chunk.css.map",
     "static/js/2.29411bce.chunk.js.LICENSE.txt": "/ys-photography/static/js/2.29411bce.chunk.js.LICENSE.txt",
     "static/media/1.76b6dca0.jpeg": "/ys-photography/static/media/1.76b6dca0.jpeg",
     "static/media/2.298e168a.jpeg": "/ys-photography/static/media/2.298e168a.jpeg",
@@ -28,7 +28,7 @@
     "static/js/runtime-main.971c10a0.js",
     "static/css/2.08002d80.chunk.css",
     "static/js/2.29411bce.chunk.js",
-    "static/css/main.2451df29.chunk.css",
-    "static/js/main.ddbd0b3f.chunk.js"
+    "static/css/main.5ac5d1c0.chunk.css",
+    "static/js/main.9a36c124.chunk.js"
   ]
 }
