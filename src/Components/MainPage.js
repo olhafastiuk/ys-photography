@@ -80,23 +80,27 @@ export default function MainPage() {
         className="mainBlock"
         align="center"
         justify="center"
-        padding="5rem"
+        padding="5%"
         height="100vh"
         bgimg="https://media.istockphoto.com/photos/gray-shadows-of-the-flowers-and-grass-picture-id1164993369?k=20&m=1164993369&s=612x612&w=0&h=_lxBLJPiVYqRTwzGGEu0sOGSclUGAqZAi4yELGJOLMo="
       >
-        <Col lg={6} md={6} xs={6}>
-          <h1> Знайомтесь, Ярина</h1>
+        <Flex direction="column" justify="center" align="center" flex="1">
+          <h1 style={{ margin: "0 0 5% 0" }}> Знайомтесь, Ярина</h1>
           <p>ЛЮДИНА ПО ТУ СТОРОНУ ОБ’ЄКТИВА</p>
-        </Col>
-        <Col lg={4} md={5} xs={6}>
-          <Image
-            style={{ "border-radius": "50px", position: "relative" }}
+        </Flex>
+        <Flex maxWidth="40%" justify="center" align="center" flex="2">
+          <img
+            style={{
+              maxWidth: "100%",
+              borderRadius: "15%",
+              "object-fit": "contain",
+            }}
             src={pp}
             alt=""
-            fluid
           />
-        </Col>
+        </Flex>
       </Flex>
+
       <Flex
         direction="column"
         height="fit-content"
@@ -160,7 +164,7 @@ export default function MainPage() {
           ))}
         </Flex>
       </Flex>
-      <Flex
+      {/* <Flex
         bgimg="https://images.pexels.com/photos/5853183/pexels-photo-5853183.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         // bgimg="https://images.pexels.com/photos/8747009/pexels-photo-8747009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         // bgimg="https://images.pexels.com/photos/8165548/pexels-photo-8165548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -233,7 +237,7 @@ export default function MainPage() {
             ЗАБРОНЮВАТИ ЗАРАЗ
           </a>
         </Flex>
-      </Flex>
+      </Flex> */}
     </main>
   );
 }

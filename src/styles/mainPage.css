@@ -38,25 +38,30 @@
   background: transparent;
 }
 
+.mainBlock:first-child {
+  position: relative;
+  z-index: 2;
+  min-width: 40%;
+}
+
 .mainBlock h1 {
   font-family: "Forum", cursive;
   font-style: normal;
   font-weight: normal;
-  font-size: 4rem;
+  font-size: 65px;
   text-align: center;
-  letter-spacing: 0.035em;
+  letter-spacing: 1.5px;
   color: #db8e8e;
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
 }
 
 .mainBlock p {
   font-family: "Forum", cursive;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.5rem;
-  line-height: 1.7rem;
+  font-size: 25px;
   text-align: center;
-  letter-spacing: 0.5rem;
+  letter-spacing: 6px;
   color: #413131;
 }
 
@@ -82,7 +87,7 @@
   align-items: center;
 }
 
-@media (max-width: 880px) {
+@media (max-width:950px) {
   #firstScreen {
     padding-top: 5vh;
     height: 90vh;
@@ -97,28 +102,27 @@
   }
 
   .mainBlock {
-    height: 50vh !important;
+    height: 70vh !important;
   }
   .mainBlock h1 {
-    font-size: 3.8rem;
-    line-height: 4rem;
-    letter-spacing: 0.035em;
+    font-size: 55px;
+    line-height: 65px;
   }
 
   .mainBlock p {
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-    letter-spacing: 0.28rem;
+    font-size: 22px;
+    letter-spacing: 6px;
+    line-height: 30px;
   }
 }
 
-@media (max-height: 500px) {
+@media (max-height: 550px) {
   .mainBlock img {
     max-height: 80vh;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   #firstScreen {
     height: 40vh;
     padding-top: 0vh;
@@ -133,13 +137,14 @@
     margin: -8vh 0 0 0 !important;
   }
   .mainBlock h1 {
-    font-size: 3.3rem;
-    line-height: 3rem;
+    font-size: 35px;
+    line-height: 40px;
   }
 
   .mainBlock p {
-    font-size: 1.2rem;
-    line-height: 1.7rem;
+    font-size: 12px;
+    letter-spacing: 4px;
+    line-height: 20px;
   }
   .mainBlock {
     height: 40vh !important;
