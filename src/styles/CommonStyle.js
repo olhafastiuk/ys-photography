@@ -7,6 +7,7 @@ const StyledFlex = styled.div`
   flex-direction: ${(props) => props.direction || "row"};
   justify-content: ${(props) => props.justify || "start"};
   align-items: ${(props) => props.align || "start"};
+  flex: ${(props) => props.flex || "unset"};
   margin: ${({ margin }) => margin || "0"};
   padding: ${({ padding }) => padding || "0"};
   width: ${(props) => props.width || "100%"};
@@ -18,6 +19,7 @@ const StyledFlex = styled.div`
   border-radius: ${(props) => props.radius};
   box-shadow: ${(props) => props.shadow};
   max-height: ${(props) => props.maxHeight};
+  max-width: ${(props) => props.maxWidth};
   z-index: ${(props) => props.z || "0"};
   position: ${(props) => props.position};\
   font-family: 'Forum', cursive;

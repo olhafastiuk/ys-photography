@@ -1,0 +1,15 @@
+.footer-soc a {
+  padding: 10px;
+}
+
+.footerLink {
+  line-height: 25px;
+  font-size: 20px;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .footer-soc {
+    flex-direction: column !important;
+  }
+}

@@ -1,11 +1,39 @@
-import f1 from "../images/gallery/1.jpeg";
-import f2 from "../images/gallery/2.jpeg";
-import f3 from "../images/gallery/3.jpeg";
-import f4 from "../images/gallery/4.jpeg";
-import f5 from "../images/gallery/5.jpeg";
+import slider1 from "../images/photo/1.jpeg";
+import slider2 from "../images/photo/2.jpeg";
+import slider3 from "../images/photo/3.jpeg";
+import slider4 from "../images/photo/4.jpeg";
+import slider5 from "../images/photo/5.jpeg";
 
-export const Photos = [f1, f2, f3, f4, f5, f1];
-export const SliderPhoto = [f1, f2, f3, f4, f5];
+import mainGallery1 from "../images/photo/main-1.jpeg";
+import mainGallery2 from "../images/photo/1.jpeg";
+import mainGallery3 from "../images/photo/main-3.jpeg";
+import mainGallery4 from "../images/photo/main-4.jpeg";
+import mainGallery5 from "../images/photo/2.jpeg";
+import mainGallery6 from "../images/photo/main-6.jpeg";
+import mainGallery7 from "../images/photo/main-7.jpeg";
+import mainGallery8 from "../images/photo/main-8.jpeg";
+import mainGallery9 from "../images/photo/main-9.jpeg";
+
+// import
+
+export const SliderPhoto = [
+  slider1,
+  slider2,
+  slider3,
+  slider4,
+  slider5,
+];
+export const Photos = [
+  mainGallery1,
+  mainGallery2,
+  mainGallery3,
+  mainGallery4,
+  mainGallery5,
+  mainGallery6,
+  mainGallery7,
+  mainGallery8,
+  mainGallery9,
+];
 
 export const questions = [
   {
@@ -75,7 +103,7 @@ export const reviews = [
 
 export const products = [
   {
-    photo: f1,
+    photo: slider1,
     title: "Фотосесія в студії",
     description: [
       "1,5год зйомки;",
@@ -87,7 +115,7 @@ export const products = [
     price: 2700,
   },
   {
-    photo: f3,
+    photo: slider3,
     title: "Фотосесія в студії",
     description: [
       "1,5год зйомки;",
