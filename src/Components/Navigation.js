@@ -43,7 +43,7 @@ export default function Navigation() {
                 </Navbar.Collapse>
               </Nav>
             </Col>
-            <Col xs="2" style={{ display: "flex", alignItems: "center" }}>
+            <Col xs="1" style={{ display: "flex", alignItems: "center" }}>
               <Navbar.Toggle
                 aria-controls="offcanvasNavbar"
                 onClick={() => {

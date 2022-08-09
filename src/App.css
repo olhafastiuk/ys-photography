@@ -4,7 +4,7 @@
 }
 
 #navigation {
-  height: 12vh;
+  height: 20vh;
 }
 
 .nav-link > a {
@@ -107,24 +107,31 @@ footer .logo {
     max-width: 1750px;
   }
 }
+@media (max-width: 1200px) {
+  #navigation {
+    height: 15vh;
+  }
+  .container {
+    max-width: 800px;
+  }
+}
+
 @media (max-width: 850px) {
+  .container {
+    margin-top: "50px" !important;
+    padding: "20px" !important;
+    max-width: 700px;
+    width: 90%;
+  }
   .offcanvas-header {
-    /* margin-top: -7vh; */
     height: 7vh;
   }
-  /* .offcanvas-backdrop {
-    margin-top: 7vh
-  } */
-
-  /* #offcanvasNavbar {
-    margin-top: 7vh;
-  } */
 
   .copyright {
     font-size: xx-small;
   }
   #navigation {
-    height: 7vh;
+    height: 10vh;
   }
   .logo {
     width: 5vh;
